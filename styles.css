@@ -1244,7 +1244,8 @@ body {
 .love-img {
   width: 100%;
   max-width: 320px;
-  height: 180px;
+  height: auto;
+  max-height: 300px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
