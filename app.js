@@ -19,10 +19,10 @@ const catIcon = {
   'Mirador':          'mountain',
   'Parque':           'trees',
   'Barrio Histórico': 'home',
-  'Puente':           'bridge',      
-  'Calle':            'footprints',
+  'Puente':           'arrow-left-right',
+  'Calle':            'route',
   'Mercado':          'store',
-  'Monasterio':       'castle',
+  'Monasterio':       'building',
   'Centro Comercial': 'shopping-bag'
 };
 
@@ -34,7 +34,7 @@ const catColor = {
   'Mirador':          '#3b82f6',
   'Parque':           '#10b981',
   'Barrio Histórico': '#f97316',
-  'Puente':           '#6b7280',
+  'Puente':           '#0ea5e9',
   'Calle':            '#eab308',
   'Mercado':          '#ef4444',
   'Monasterio':       '#a855f7',
@@ -129,12 +129,13 @@ function renderMarkers() {
     const marker = L.marker([lugar.latitud, lugar.longitud], { icon }).addTo(map);
 
     const precio = lugar.precio === 0 ? 'Gratis' : `S/ ${lugar.precio}`;
+    const mapsUrl = getMapsUrl(lugar);
     const popupHTML = `
       <div class="popup-inner">
         <h4>${lugar.nombre}</h4>
         <div class="popup-cat">${lugar.categoria} · ${precio}</div>
         <div class="popup-desc">${lugar.descripcion}</div>
-        <a class="popup-link" href="${lugar.url_maps}" target="_blank" rel="noopener">Ver en Maps</a>
+        <a class="popup-link" href="${mapsUrl}" target="_blank" rel="noopener">Ver en Maps</a>
       </div>
     `;
     marker.bindPopup(popupHTML, { maxWidth: 260 });
@@ -262,7 +263,7 @@ function showDetail(lugar) {
     distEl.textContent = 'Activa tu ubicación';
   }
 
-  document.getElementById('detail-maps').href = lugar.url_maps;
+  document.getElementById('detail-maps').href = getMapsUrl(lugar);
 
   card.classList.add('active');
 
@@ -462,6 +463,10 @@ function toRad(deg) { return deg * (Math.PI / 180); }
 function formatDistance(km) {
   if (km < 1) return `${Math.round(km * 1000)} m`;
   return `${km.toFixed(1)} km`;
+}
+
+function getMapsUrl(lugar) {
+  return `https://www.google.com/maps/search/?api=1&query=${lugar.latitud},${lugar.longitud}`;
 }
 
 function flyToPlace(lugar) {
