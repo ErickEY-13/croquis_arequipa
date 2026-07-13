@@ -255,15 +255,16 @@ function showDetail(lugar) {
   document.getElementById('detail-precio').textContent =
     lugar.precio === 0 ? 'Entrada gratuita' : `S/ ${lugar.precio}`;
 
-  const distEl = document.getElementById('detail-distancia');
+  const distBadge = document.getElementById('detail-dist-badge');
   if (userLatLng) {
     const dist = haversine(userLatLng.lat, userLatLng.lng, lugar.latitud, lugar.longitud);
-    distEl.textContent = formatDistance(dist);
+    distBadge.innerHTML = `<i data-lucide="map-pin" style="width:14px;height:14px;color:var(--text-tertiary);"></i> ${formatDistance(dist)}`;
   } else {
-    distEl.textContent = 'Activa tu ubicación';
+    distBadge.innerHTML = '';
   }
 
   document.getElementById('detail-maps').href = getMapsUrl(lugar);
+  document.getElementById('detail-directions').href = getDirectionsUrl(lugar);
 
   card.classList.add('active');
 
@@ -467,6 +468,13 @@ function formatDistance(km) {
 
 function getMapsUrl(lugar) {
   return `https://www.google.com/maps/search/?api=1&query=${lugar.latitud},${lugar.longitud}`;
+}
+
+function getDirectionsUrl(lugar) {
+  if (userLatLng) {
+    return `https://www.google.com/maps/dir/?api=1&origin=${userLatLng.lat},${userLatLng.lng}&destination=${lugar.latitud},${lugar.longitud}`;
+  }
+  return `https://www.google.com/maps/dir/?api=1&destination=${lugar.latitud},${lugar.longitud}`;
 }
 
 function flyToPlace(lugar) {

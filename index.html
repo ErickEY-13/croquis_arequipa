@@ -136,30 +136,36 @@
 
   <!-- DETAIL CARD -->
   <div id="detail-card" class="detail-card">
+    <div class="detail-accent" id="detail-accent"></div>
     <button id="btn-close-detail" class="btn-close-sm">
       <i data-lucide="x" class="close-icon-sm"></i>
     </button>
-    <div class="detail-badge" id="detail-badge"></div>
+    <div class="detail-header">
+      <div class="detail-badge" id="detail-badge"></div>
+      <span class="detail-dist-badge" id="detail-dist-badge"></span>
+    </div>
     <h2 id="detail-name" class="detail-name"></h2>
     <p id="detail-desc" class="detail-desc"></p>
-    <div class="detail-meta">
-      <div class="meta-item">
-        <i data-lucide="clock" class="meta-icon"></i>
+    <div class="detail-info-grid">
+      <div class="info-chip">
+        <i data-lucide="clock" class="info-chip-icon"></i>
         <span id="detail-horario"></span>
       </div>
-      <div class="meta-item">
-        <i data-lucide="wallet" class="meta-icon"></i>
+      <div class="info-chip">
+        <i data-lucide="wallet" class="info-chip-icon"></i>
         <span id="detail-precio"></span>
       </div>
-      <div class="meta-item">
-        <i data-lucide="map-pin" class="meta-icon"></i>
-        <span id="detail-distancia"></span>
-      </div>
     </div>
-    <a id="detail-maps" class="btn-maps" href="#" target="_blank" rel="noopener">
-      <i data-lucide="external-link" class="maps-icon"></i>
-      <span>Abrir en Google Maps</span>
-    </a>
+    <div class="detail-actions">
+      <a id="detail-directions" class="btn-directions" href="#" target="_blank" rel="noopener">
+        <i data-lucide="navigation" class="btn-dir-icon"></i>
+        <span>Cómo llegar</span>
+      </a>
+      <a id="detail-maps" class="btn-maps-secondary" href="#" target="_blank" rel="noopener">
+        <i data-lucide="map" class="btn-dir-icon"></i>
+        <span>Ver mapa</span>
+      </a>
+    </div>
   </div>
 
   <!-- NEAREST PANEL -->
@@ -172,6 +178,12 @@
       Lugares más cercanos
     </h3>
     <div id="nearest-list" class="nearest-list"></div>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="signature">
+    <span>Para Yamileth, con amor</span>
+    <i data-lucide="heart" class="signature-heart"></i>
   </div>
 
   <!-- SCRIPTS -->
