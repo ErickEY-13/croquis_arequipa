@@ -9,7 +9,8 @@
     "longitud": -71.5369,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/plaza_armas"
+    "url_maps": "https://goo.gl/maps/plaza_armas",
+    "imagen": ""
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "longitud": -71.5365,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/centro_historico"
+    "url_maps": "https://goo.gl/maps/centro_historico",
+    "imagen": ""
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "longitud": -71.5361,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/catedral_arequipa"
+    "url_maps": "https://goo.gl/maps/catedral_arequipa",
+    "imagen": ""
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "longitud": -71.5338,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/san_lazaro"
+    "url_maps": "https://goo.gl/maps/san_lazaro",
+    "imagen": ""
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "longitud": -71.5342,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/calle_mercaderes"
+    "url_maps": "https://goo.gl/maps/calle_mercaderes",
+    "imagen": ""
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "longitud": -71.5364,
     "horario": "09:00 - 20:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/claustros_compania"
+    "url_maps": "https://goo.gl/maps/claustros_compania",
+    "imagen": ""
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "longitud": -71.5368,
     "horario": "09:00 - 18:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/iglesia_compania"
+    "url_maps": "https://goo.gl/maps/iglesia_compania",
+    "imagen": ""
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "longitud": -71.5352,
     "horario": "07:00 - 19:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/san_francisco"
+    "url_maps": "https://goo.gl/maps/san_francisco",
+    "imagen": ""
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "longitud": -71.5387,
     "horario": "08:00 - 18:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/san_agustin"
+    "url_maps": "https://goo.gl/maps/san_agustin",
+    "imagen": ""
   },
   {
     "id": 10,
@@ -117,7 +126,8 @@
     "longitud": -71.535,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/plaza_san_francisco"
+    "url_maps": "https://goo.gl/maps/plaza_san_francisco",
+    "imagen": ""
   },
   {
     "id": 11,
@@ -129,7 +139,8 @@
     "longitud": -71.5349,
     "horario": "06:00 - 19:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/mercado_san_camilo"
+    "url_maps": "https://goo.gl/maps/mercado_san_camilo",
+    "imagen": ""
   },
   {
     "id": 12,
@@ -141,7 +152,8 @@
     "longitud": -71.5401,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/tambo_bronce"
+    "url_maps": "https://goo.gl/maps/tambo_bronce",
+    "imagen": ""
   },
   {
     "id": 13,
@@ -153,7 +165,8 @@
     "longitud": -71.5405,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/tambo_cabezona"
+    "url_maps": "https://goo.gl/maps/tambo_cabezona",
+    "imagen": ""
   },
   {
     "id": 14,
@@ -165,7 +178,8 @@
     "longitud": -71.5398,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/tambo_solar"
+    "url_maps": "https://goo.gl/maps/tambo_solar",
+    "imagen": ""
   },
   {
     "id": 15,
@@ -177,7 +191,8 @@
     "longitud": -71.54,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/callejon_solar"
+    "url_maps": "https://goo.gl/maps/callejon_solar",
+    "imagen": ""
   },
   {
     "id": 16,
@@ -189,7 +204,8 @@
     "longitud": -71.5422,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/puente_grau"
+    "url_maps": "https://goo.gl/maps/puente_grau",
+    "imagen": ""
   },
   {
     "id": 17,
@@ -201,7 +217,8 @@
     "longitud": -71.5414,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/puente_bolognesi"
+    "url_maps": "https://goo.gl/maps/puente_bolognesi",
+    "imagen": ""
   },
   {
     "id": 18,
@@ -213,7 +230,8 @@
     "longitud": -71.5482,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/puente_fierro"
+    "url_maps": "https://goo.gl/maps/puente_fierro",
+    "imagen": ""
   },
   {
     "id": 19,
@@ -221,11 +239,12 @@
     "categoria": "Mirador",
     "tipo": "Gratis",
     "descripcion": "Famoso mirador con arcos de sillar e inscripciones, ofrece la mejor vista del volcán Misti.",
-    "latitud": -16.3920,
-    "longitud": -71.5400,
+    "latitud": -16.392,
+    "longitud": -71.54,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/mirador_yanahuara"
+    "url_maps": "https://goo.gl/maps/mirador_yanahuara",
+    "imagen": ""
   },
   {
     "id": 20,
@@ -237,7 +256,8 @@
     "longitud": -71.5413,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/plaza_yanahuara"
+    "url_maps": "https://goo.gl/maps/plaza_yanahuara",
+    "imagen": ""
   },
   {
     "id": 21,
@@ -249,7 +269,8 @@
     "longitud": -71.5414,
     "horario": "08:00 - 18:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/iglesia_yanahuara"
+    "url_maps": "https://goo.gl/maps/iglesia_yanahuara",
+    "imagen": ""
   },
   {
     "id": 22,
@@ -261,7 +282,8 @@
     "longitud": -71.542,
     "horario": "08:00 - 18:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/mirador_carmen_alto"
+    "url_maps": "https://goo.gl/maps/mirador_carmen_alto",
+    "imagen": ""
   },
   {
     "id": 23,
@@ -273,7 +295,8 @@
     "longitud": -71.5415,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/valle_chilina"
+    "url_maps": "https://goo.gl/maps/valle_chilina",
+    "imagen": ""
   },
   {
     "id": 24,
@@ -285,7 +308,8 @@
     "longitud": -71.53,
     "horario": "06:00 - 18:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/selva_alegre"
+    "url_maps": "https://goo.gl/maps/selva_alegre",
+    "imagen": ""
   },
   {
     "id": 25,
@@ -297,7 +321,8 @@
     "longitud": -71.545,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/plaza_cayma"
+    "url_maps": "https://goo.gl/maps/plaza_cayma",
+    "imagen": ""
   },
   {
     "id": 26,
@@ -309,7 +334,8 @@
     "longitud": -71.5452,
     "horario": "08:00 - 17:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/iglesia_cayma"
+    "url_maps": "https://goo.gl/maps/iglesia_cayma",
+    "imagen": ""
   },
   {
     "id": 27,
@@ -321,7 +347,8 @@
     "longitud": -71.564,
     "horario": "08:00 - 17:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/mirador_sachaca"
+    "url_maps": "https://goo.gl/maps/mirador_sachaca",
+    "imagen": ""
   },
   {
     "id": 28,
@@ -333,7 +360,8 @@
     "longitud": -71.503,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/plaza_paucarpata"
+    "url_maps": "https://goo.gl/maps/plaza_paucarpata",
+    "imagen": ""
   },
   {
     "id": 29,
@@ -345,7 +373,8 @@
     "longitud": -71.5349,
     "horario": "08:30 - 18:30",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/mundo_alpaca"
+    "url_maps": "https://goo.gl/maps/mundo_alpaca",
+    "imagen": ""
   },
   {
     "id": 30,
@@ -357,7 +386,8 @@
     "longitud": -71.543,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/rio_chili"
+    "url_maps": "https://goo.gl/maps/rio_chili",
+    "imagen": ""
   },
   {
     "id": 31,
@@ -369,7 +399,8 @@
     "longitud": -71.5372,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/portal_flores"
+    "url_maps": "https://goo.gl/maps/portal_flores",
+    "imagen": ""
   },
   {
     "id": 32,
@@ -381,7 +412,8 @@
     "longitud": -71.5375,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/portal_san_agustin"
+    "url_maps": "https://goo.gl/maps/portal_san_agustin",
+    "imagen": ""
   },
   {
     "id": 33,
@@ -393,7 +425,8 @@
     "longitud": -71.5369,
     "horario": "24 horas",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/portal_municipalidad"
+    "url_maps": "https://goo.gl/maps/portal_municipalidad",
+    "imagen": ""
   },
   {
     "id": 34,
@@ -405,7 +438,8 @@
     "longitud": -71.5368,
     "horario": "09:00 - 17:00",
     "precio": 45,
-    "url_maps": "https://goo.gl/maps/santa_catalina"
+    "url_maps": "https://goo.gl/maps/santa_catalina",
+    "imagen": ""
   },
   {
     "id": 35,
@@ -417,7 +451,8 @@
     "longitud": -71.5362,
     "horario": "09:00 - 18:00",
     "precio": 25,
-    "url_maps": "https://goo.gl/maps/museo_santuarios"
+    "url_maps": "https://goo.gl/maps/museo_santuarios",
+    "imagen": ""
   },
   {
     "id": 36,
@@ -429,7 +464,8 @@
     "longitud": -71.5361,
     "horario": "10:00 - 17:00",
     "precio": 10,
-    "url_maps": "https://goo.gl/maps/museo_catedral"
+    "url_maps": "https://goo.gl/maps/museo_catedral",
+    "imagen": ""
   },
   {
     "id": 37,
@@ -441,7 +477,8 @@
     "longitud": -71.543,
     "horario": "09:00 - 17:00",
     "precio": 15,
-    "url_maps": "https://goo.gl/maps/museo_recoleta"
+    "url_maps": "https://goo.gl/maps/museo_recoleta",
+    "imagen": ""
   },
   {
     "id": 38,
@@ -453,7 +490,8 @@
     "longitud": -71.531,
     "horario": "09:00 - 17:00",
     "precio": 20,
-    "url_maps": "https://goo.gl/maps/museo_santa_teresa"
+    "url_maps": "https://goo.gl/maps/museo_santa_teresa",
+    "imagen": ""
   },
   {
     "id": 39,
@@ -465,7 +503,8 @@
     "longitud": -71.5355,
     "horario": "08:00 - 15:30",
     "precio": 5,
-    "url_maps": "https://goo.gl/maps/museo_municipal"
+    "url_maps": "https://goo.gl/maps/museo_municipal",
+    "imagen": ""
   },
   {
     "id": 40,
@@ -477,7 +516,8 @@
     "longitud": -71.5345,
     "horario": "09:00 - 15:00",
     "precio": 5,
-    "url_maps": "https://goo.gl/maps/museo_unsa"
+    "url_maps": "https://goo.gl/maps/museo_unsa",
+    "imagen": ""
   },
   {
     "id": 41,
@@ -489,7 +529,8 @@
     "longitud": -71.545,
     "horario": "10:00 - 17:00",
     "precio": 10,
-    "url_maps": "https://goo.gl/maps/museo_arte_contemporaneo"
+    "url_maps": "https://goo.gl/maps/museo_arte_contemporaneo",
+    "imagen": ""
   },
   {
     "id": 42,
@@ -501,7 +542,8 @@
     "longitud": -71.539,
     "horario": "08:30 - 15:30",
     "precio": 10,
-    "url_maps": "https://goo.gl/maps/museo_vargas_llosa"
+    "url_maps": "https://goo.gl/maps/museo_vargas_llosa",
+    "imagen": ""
   },
   {
     "id": 43,
@@ -513,7 +555,8 @@
     "longitud": -71.5375,
     "horario": "09:00 - 17:00",
     "precio": 10,
-    "url_maps": "https://goo.gl/maps/casa_moral"
+    "url_maps": "https://goo.gl/maps/casa_moral",
+    "imagen": ""
   },
   {
     "id": 44,
@@ -525,7 +568,8 @@
     "longitud": -71.535,
     "horario": "09:00 - 18:00",
     "precio": 5,
-    "url_maps": "https://goo.gl/maps/tristan_pozo"
+    "url_maps": "https://goo.gl/maps/tristan_pozo",
+    "imagen": ""
   },
   {
     "id": 45,
@@ -537,7 +581,8 @@
     "longitud": -71.53,
     "horario": "09:00 - 17:00",
     "precio": 15,
-    "url_maps": "https://goo.gl/maps/mansion_fundador"
+    "url_maps": "https://goo.gl/maps/mansion_fundador",
+    "imagen": ""
   },
   {
     "id": 46,
@@ -549,7 +594,8 @@
     "longitud": -71.498,
     "horario": "09:00 - 17:00",
     "precio": 10,
-    "url_maps": "https://goo.gl/maps/molino_sabandia"
+    "url_maps": "https://goo.gl/maps/molino_sabandia",
+    "imagen": ""
   },
   {
     "id": 47,
@@ -561,7 +607,8 @@
     "longitud": -71.583,
     "horario": "08:00 - 16:00",
     "precio": 15,
-    "url_maps": "https://goo.gl/maps/ruta_sillar"
+    "url_maps": "https://goo.gl/maps/ruta_sillar",
+    "imagen": ""
   },
   {
     "id": 48,
@@ -573,7 +620,8 @@
     "longitud": -71.54,
     "horario": "08:00 - 14:00",
     "precio": 100,
-    "url_maps": "https://goo.gl/maps/canotaje_chili"
+    "url_maps": "https://goo.gl/maps/canotaje_chili",
+    "imagen": ""
   },
   {
     "id": 49,
@@ -585,7 +633,8 @@
     "longitud": -71.5349,
     "horario": "08:30 - 18:30",
     "precio": 20,
-    "url_maps": "https://goo.gl/maps/mundo_alpaca_tour"
+    "url_maps": "https://goo.gl/maps/mundo_alpaca_tour",
+    "imagen": ""
   },
   {
     "id": 50,
@@ -597,7 +646,8 @@
     "longitud": -71.681,
     "horario": "06:00 - 15:00",
     "precio": 15,
-    "url_maps": "https://goo.gl/maps/banos_yura"
+    "url_maps": "https://goo.gl/maps/banos_yura",
+    "imagen": ""
   },
   {
     "id": 51,
@@ -609,7 +659,8 @@
     "longitud": -71.869,
     "horario": "06:00 - 17:00",
     "precio": 70,
-    "url_maps": "https://goo.gl/maps/canon_colca"
+    "url_maps": "https://goo.gl/maps/canon_colca",
+    "imagen": ""
   },
   {
     "id": 52,
@@ -621,7 +672,8 @@
     "longitud": -71.905,
     "horario": "07:00 - 10:00",
     "precio": 70,
-    "url_maps": "https://goo.gl/maps/cruz_condor"
+    "url_maps": "https://goo.gl/maps/cruz_condor",
+    "imagen": ""
   },
   {
     "id": 53,
@@ -633,7 +685,8 @@
     "longitud": -71.3,
     "horario": "06:00 - 17:00",
     "precio": 30,
-    "url_maps": "https://goo.gl/maps/reserva_salinas"
+    "url_maps": "https://goo.gl/maps/reserva_salinas",
+    "imagen": ""
   },
   {
     "id": 54,
@@ -645,7 +698,8 @@
     "longitud": -71.1333,
     "horario": "06:00 - 17:00",
     "precio": 30,
-    "url_maps": "https://goo.gl/maps/laguna_salinas"
+    "url_maps": "https://goo.gl/maps/laguna_salinas",
+    "imagen": ""
   },
   {
     "id": 55,
@@ -657,7 +711,8 @@
     "longitud": -71.37,
     "horario": "08:00 - 16:00",
     "precio": 10,
-    "url_maps": "https://goo.gl/maps/cuevas_sumbay"
+    "url_maps": "https://goo.gl/maps/cuevas_sumbay",
+    "imagen": ""
   },
   {
     "id": 56,
@@ -669,7 +724,8 @@
     "longitud": -71.012,
     "horario": "06:00 - 17:00",
     "precio": 10,
-    "url_maps": "https://goo.gl/maps/bosque_imata"
+    "url_maps": "https://goo.gl/maps/bosque_imata",
+    "imagen": ""
   },
   {
     "id": 57,
@@ -681,7 +737,8 @@
     "longitud": -71.4089,
     "horario": "24 horas",
     "precio": 250,
-    "url_maps": "https://goo.gl/maps/volcan_misti"
+    "url_maps": "https://goo.gl/maps/volcan_misti",
+    "imagen": ""
   },
   {
     "id": 58,
@@ -693,7 +750,8 @@
     "longitud": -71.5303,
     "horario": "24 horas",
     "precio": 300,
-    "url_maps": "https://goo.gl/maps/volcan_chachani"
+    "url_maps": "https://goo.gl/maps/volcan_chachani",
+    "imagen": ""
   },
   {
     "id": 59,
@@ -705,7 +763,8 @@
     "longitud": -71.5143,
     "horario": "10:00 - 22:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/mall_aventura"
+    "url_maps": "https://goo.gl/maps/mall_aventura",
+    "imagen": ""
   },
   {
     "id": 60,
@@ -717,7 +776,8 @@
     "longitud": -71.5468,
     "horario": "10:00 - 22:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/mallplaza_arequipa"
+    "url_maps": "https://goo.gl/maps/mallplaza_arequipa",
+    "imagen": ""
   },
   {
     "id": 61,
@@ -729,7 +789,8 @@
     "longitud": -71.5206,
     "horario": "10:00 - 22:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/parque_lambramani"
+    "url_maps": "https://goo.gl/maps/parque_lambramani",
+    "imagen": ""
   },
   {
     "id": 62,
@@ -741,6 +802,7 @@
     "longitud": -71.5341,
     "horario": "10:00 - 22:00",
     "precio": 0,
-    "url_maps": "https://goo.gl/maps/arequipa_center"
+    "url_maps": "https://goo.gl/maps/arequipa_center",
+    "imagen": ""
   }
 ]
