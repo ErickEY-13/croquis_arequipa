@@ -376,6 +376,23 @@ function showDetail(lugar) {
   document.getElementById('detail-maps').href = getMapsUrl(lugar);
   document.getElementById('detail-directions').href = getDirectionsUrl(lugar);
 
+  // Fun facts
+  const funBtn = document.getElementById('btn-fun-facts');
+  const funPanel = document.getElementById('fun-facts-panel');
+  funPanel.classList.remove('open');
+  funBtn.classList.remove('open');
+
+  if (lugar.historia || lugar.dato_curioso) {
+    funBtn.style.display = 'flex';
+    document.getElementById('fun-fact-historia').textContent = lugar.historia || '';
+    document.getElementById('fun-fact-dato').textContent = lugar.dato_curioso || '';
+    // Show/hide sections based on availability
+    document.getElementById('fun-fact-historia').parentElement.style.display = lugar.historia ? 'block' : 'none';
+    document.getElementById('fun-fact-dato').parentElement.style.display = lugar.dato_curioso ? 'block' : 'none';
+  } else {
+    funBtn.style.display = 'none';
+  }
+
   card.classList.add('active');
 
   // Re-init icons in card
@@ -811,6 +828,13 @@ function initCloseButtons() {
   document.getElementById('btn-close-detail').addEventListener('click', closeDetail);
   document.getElementById('btn-close-nearest').addEventListener('click', closeNearest);
   document.getElementById('btn-draw-route').addEventListener('click', drawRouteOnMap);
+
+  document.getElementById('btn-fun-facts').addEventListener('click', () => {
+    const btn = document.getElementById('btn-fun-facts');
+    const panel = document.getElementById('fun-facts-panel');
+    btn.classList.toggle('open');
+    panel.classList.toggle('open');
+  });
 }
 
 // ═══════════════════════════════════════════════

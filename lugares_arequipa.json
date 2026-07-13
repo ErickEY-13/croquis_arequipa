@@ -10,7 +10,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/plaza_armas",
-    "imagen": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQdyZTUFLgZT8mN15RfhT88Z7kLPaW_c3-XMGzj47TgMcsMZoQj7-QNMuzqIDrF857jfV-2y5w-IHShPm6izynUZQrNjF_SnuSk214g2L-lxac-Kw_GiJknQr-psRjvTqQ59M=s680-w680-h510-rw"
+    "imagen": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQdyZTUFLgZT8mN15RfhT88Z7kLPaW_c3-XMGzj47TgMcsMZoQj7-QNMuzqIDrF857jfV-2y5w-IHShPm6izynUZQrNjF_SnuSk214g2L-lxac-Kw_GiJknQr-psRjvTqQ59M=s680-w680-h510-rw",
+    "historia": "Aquí se fundó oficialmente la ciudad de Arequipa el 15 de agosto de 1540 por Garcí Manuel de Carbajal. Es única porque está rodeada por portales de sillar en tres de sus cuatro lados, algo poco común en plazas coloniales sudamericanas.",
+    "dato_curioso": "En la pileta central hay una pequeña figura de bronce llamada el 'Tuturutu', que representa a un antiguo trompetero que anunciaba eventos importantes a la ciudad."
   },
   {
     "id": 2,
@@ -26,7 +28,9 @@
     "imagenes": [
       "https://upload.wikimedia.org/wikipedia/commons/5/5f/Catedral_Arequipa%2C_Peru.jpg",
       "https://consultasenlinea.mincetur.gob.pe/fichaInventario/foto.aspx?cod=400168"
-    ]
+    ],
+    "historia": "Fue declarado Patrimonio de la Humanidad por la UNESCO en el año 2000. Su arquitectura en sillar blanco volcánico le dio a Arequipa el apodo de 'La Ciudad Blanca'. El centro conserva más de 500 casonas y edificios coloniales.",
+    "dato_curioso": "Arequipa tiene un fuerte sentimiento regionalista. Existe la tradición jocosa de la 'República Independiente de Arequipa', con souvenirs como pasaportes propios de la ciudad."
   },
   {
     "id": 3,
@@ -39,7 +43,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/catedral_arequipa",
-    "imagen": ""
+    "imagen": "https://cuscoperu.b-cdn.net/wp-content/uploads/2023/04/La-Basilica-Catedral-del-Cusco.jpg",
+    "historia": "Construida originalmente en el siglo XVII, ha sido reconstruida varias veces tras terremotos e incendios. Ocupa todo un lado de la Plaza de Armas, siendo una de las pocas catedrales del Perú con esta característica.",
+    "dato_curioso": "Posee un órgano de origen belga considerado uno de los más grandes de Sudamérica. Su altar mayor está hecho de mármol de Carrara importado desde Italia."
   },
   {
     "id": 4,
@@ -52,7 +58,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/san_lazaro",
-    "imagen": ""
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3IdKWHdomXgWALKr5CnK4X6GQeOBovB7dIyBS459er82vD0qbGMrnGZs&s=10",
+    "historia": "Es el barrio más antiguo de Arequipa. Aquí se establecieron los primeros españoles en 1539, un año antes de la fundación oficial de la ciudad. Fue construido sobre un asentamiento indígena de los Yarabayas.",
+    "dato_curioso": "Sus calles estrechas y sin patrón rompen el diseño cuadriculado del resto del centro histórico, porque siguen el trazado original del pueblo indígena precolombino."
   },
   {
     "id": 5,
@@ -65,7 +73,12 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/calle_mercaderes",
-    "imagen": ""
+    "imagenes": [
+      "https://d37rmf1ynyg9aw.cloudfront.net/fit-in/1280x1280/data/v4/resources/images/65b98257-c220-44c9-9ce9-993d3d66f60d.jpg",
+      "https://i.pinimg.com/736x/13/9f/f8/139ff8b01530c5e9b321a4fffe071243.jpg"
+    ],
+    "historia": "Desde la época colonial fue el principal eje comercial de Arequipa. Los mercaderes traían productos del altiplano y de la costa para venderlos aquí. Hoy sigue siendo la arteria comercial más importante del centro.",
+    "dato_curioso": "Debajo de sus bóvedas de sillar existen pasajes subterráneos coloniales que conectaban tiendas y que algunos creen que llegan hasta el río Chili."
   },
   {
     "id": 6,
@@ -78,7 +91,9 @@
     "horario": "09:00 - 20:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/claustros_compania",
-    "imagen": ""
+    "imagen": "https://www.tur4all.com/images/137596",
+    "historia": "Construidos por los jesuitas en el siglo XVII, estos claustros fueron parte del complejo educativo más importante de la colonia en Arequipa. Tras la expulsión de los jesuitas en 1767, pasaron por varios usos.",
+    "dato_curioso": "Los tallados de sillar en sus arquerías son tan detallados que muestran frutas tropicales, ángeles y elementos de la naturaleza local, fusionando el arte europeo con motivos andinos."
   },
   {
     "id": 7,
@@ -91,7 +106,9 @@
     "horario": "09:00 - 18:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/iglesia_compania",
-    "imagen": ""
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Iglesia_de_la_Compa%C3%B1%C3%ADa_de_Jes%C3%BAs%2C_Plaza_de_Armas%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_51.JPG/1280px-Iglesia_de_la_Compa%C3%B1%C3%ADa_de_Jes%C3%BAs%2C_Plaza_de_Armas%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_51.JPG",
+    "historia": "Fue construida por la Compañía de Jesús entre 1590 y 1698. Su fachada es considerada la máxima expresión del barroco mestizo arequipeño, donde se fusionan elementos europeos con iconografía andina.",
+    "dato_curioso": "En su fachada se pueden ver tallados de pumas, cóndores y plantas de la zona mezclados con ángeles y santos europeos — algo único en el mundo."
   },
   {
     "id": 8,
@@ -104,7 +121,9 @@
     "horario": "07:00 - 19:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/san_francisco",
-    "imagen": ""
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/8/89/Complejo_San_Francisco%2C_Arequipa%2C_Per%C3%BA%2C_2015-08-02%2C_DD_79-81_HDR.JPG",
+    "historia": "El complejo franciscano data del siglo XVI y fue uno de los primeros en establecerse en Arequipa. Los franciscanos jugaron un papel fundamental en la evangelización del sur del Perú.",
+    "dato_curioso": "Debajo de la iglesia existen catacumbas coloniales donde se enterraban a los frailes y benefactores. Algunas de estas criptas aún conservan restos humanos."
   },
   {
     "id": 9,
@@ -117,7 +136,9 @@
     "horario": "08:00 - 18:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/san_agustin",
-    "imagen": ""
+    "imagen": "https://www.arzobispadoarequipa.org.pe/images/agustinsdlm.jpg",
+    "historia": "Construida por la orden agustina en el siglo XVII, su fachada es una obra maestra del barroco mestizo. La cúpula octogonal es una de las más impresionantes de la arquitectura religiosa arequipeña.",
+    "dato_curioso": "Su cúpula está construida completamente en sillar sin usar un solo clavo ni estructura metálica — solo piedra volcánica perfectamente ensamblada."
   },
   {
     "id": 10,
@@ -130,7 +151,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/plaza_san_francisco",
-    "imagen": ""
+    "imagen": "https://i0.wp.com/machupicchusacred.com/wp-content/uploads/2025/03/Atractivos-de-la-Plaza-San-Francisco.jpg?fit=1900%2C800&ssl=1",
+    "historia": "Esta plaza ha sido desde la colonia un punto de encuentro social. Era conocida como la 'plaza del pueblo' porque aquí se reunían los artesanos y comerciantes locales.",
+    "dato_curioso": "Cada 15 de agosto, durante las fiestas de Arequipa, esta plaza se llena de vendedores de 'buñuelos' y picarones, manteniendo una tradición que tiene más de 200 años."
   },
   {
     "id": 11,
@@ -143,7 +166,9 @@
     "horario": "06:00 - 19:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mercado_san_camilo",
-    "imagen": ""
+    "imagen": "https://diariocorreo.pe/resizer/v2/LNQFQZSQQ5CTTKBPYST5MDPPMM.jpeg?auth=29f040eed0a45c147ca180f39e631eadbd4b44b4a89da19a3ad71b5621273d5e&width=4000&height=2252&quality=75&smart=true",
+    "historia": "La estructura metálica del mercado fue diseñada por la firma de Gustave Eiffel (el mismo de la Torre Eiffel) a finales del siglo XIX. Es uno de los pocos mercados del mundo con esta distinción.",
+    "dato_curioso": "Aquí puedes probar más de 30 tipos diferentes de jugos de frutas exóticas en un solo pasillo. El jugo de papaya arequipeña es famoso por su sabor único que no existe en ningún otro lugar."
   },
   {
     "id": 12,
@@ -156,7 +181,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/tambo_bronce",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Los 'tambos' eran posadas coloniales donde se alojaban los mercaderes que llegaban a Arequipa con sus productos. El Tambo de Bronce data aproximadamente de 1680 y es probablemente el más antiguo de la ciudad.",
+    "dato_curioso": "Fue gravemente dañado por el terremoto del 2001 y estaba convertido en un tugurio. Fue rescatado gracias a la cooperación española (AECID) y transformado en un vecindario modelo."
   },
   {
     "id": 13,
@@ -169,7 +196,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/tambo_cabezona",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Su curioso nombre viene de una antigua propietaria apodada 'La Cabezona'. Los tambos eran esenciales para la economía colonial, funcionando como almacenes y hospedajes para arrieros.",
+    "dato_curioso": "A diferencia de otros tambos restaurados como museos, este sigue siendo habitado por familias arequipeñas que viven entre muros de sillar de más de 300 años."
   },
   {
     "id": 14,
@@ -182,7 +211,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/tambo_solar",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Este tambo formaba parte de una red de posadas coloniales a orillas del río Chili. Los viajeros que llegaban del altiplano descansaban aquí antes de entrar al centro de la ciudad.",
+    "dato_curioso": "Su patio principal conserva el empedrado original de hace más de 200 años, y en sus paredes aún se pueden ver marcas de los amarraderos donde ataban las mulas de carga."
   },
   {
     "id": 15,
@@ -195,7 +226,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/callejon_solar",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Este callejón conectaba los tambos coloniales con el río Chili. Era la ruta que usaban los arrieros para llevar agua y mercancías. Sus muros de sillar datan del siglo XVIII.",
+    "dato_curioso": "Es uno de los rincones más fotogénicos de Arequipa. Al atardecer, la luz del sol ilumina las paredes de sillar dándoles un tono dorado que solo dura unos minutos."
   },
   {
     "id": 16,
@@ -208,7 +241,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/puente_grau",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Lleva el nombre del almirante Miguel Grau, héroe naval peruano de la Guerra del Pacífico. Es uno de los puentes más transitados de Arequipa y conecta el centro con los distritos del oeste.",
+    "dato_curioso": "Desde este puente se tiene una de las mejores vistas del volcán Misti al atardecer. Los arequipeños lo llaman su 'puente de los suspiros' por las parejas que pasean al caer la tarde."
   },
   {
     "id": 17,
@@ -221,7 +256,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/puente_bolognesi",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Nombrado en honor al coronel Francisco Bolognesi, héroe de la Batalla de Arica. Es uno de los puentes históricos que cruzan el río Chili y ha sido reconstruido tras varios terremotos.",
+    "dato_curioso": "Debajo del puente, en las riberas del río Chili, aún crecen molles y sauces centenarios que los arequipeños consideran sagrados."
   },
   {
     "id": 18,
@@ -234,7 +271,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/puente_fierro",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Fue construido alrededor de 1870 por la Baltimore Bridge Company bajo la dirección de Henry Meiggs para el paso del ferrocarril Arequipa-Puno. Utiliza el sistema de 'Armadura Fink' y columnas Phoenix de hierro forjado.",
+    "dato_curioso": "¡La creencia de que fue diseñado por Gustave Eiffel es un mito! En realidad fue obra de ingenieros estadounidenses. Sin embargo, el Mercado San Camilo sí tiene diseño de la firma Eiffel."
   },
   {
     "id": 19,
@@ -247,7 +286,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mirador_yanahuara",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Construido en el siglo XIX, sus arcos de sillar contienen inscripciones de personajes ilustres arequipeños. Es el mirador más emblemático de la ciudad y ofrece la vista clásica del Misti.",
+    "dato_curioso": "Cada arco tiene grabada una frase de un personaje famoso de Arequipa. La más conocida dice: 'Eres sillar, eres valor y rebeldía', resumiendo el espíritu arequipeño."
   },
   {
     "id": 20,
@@ -260,7 +301,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/plaza_yanahuara",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Yanahuara fue un pueblo de indios durante la colonia, separado de la ciudad española. Su plaza conserva el encanto del distrito más pintoresco de Arequipa.",
+    "dato_curioso": "El nombre 'Yanahuara' viene del quechua y significa 'pantalón negro', haciendo referencia a la vestimenta oscura que usaban los habitantes originales de la zona."
   },
   {
     "id": 21,
@@ -273,7 +316,9 @@
     "horario": "08:00 - 18:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/iglesia_yanahuara",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Data del siglo XVIII y su fachada de sillar es un ejemplo excepcional del barroco mestizo. Es una de las iglesias más fotografiadas de Arequipa por su belleza y ubicación.",
+    "dato_curioso": "En su interior se encuentra una imagen del Señor de la Caña que, según la tradición, sudó sangre durante un terremoto, lo que la convirtió en una de las imágenes más veneradas de Arequipa."
   },
   {
     "id": 22,
@@ -286,7 +331,9 @@
     "horario": "08:00 - 18:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mirador_carmen_alto",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Carmen Alto es un pueblo tradicional en las alturas de Cayma. Desde aquí se pueden ver los tres volcanes tutelares: Misti, Chachani y Pichu Pichu, junto con las andenería preinca del valle.",
+    "dato_curioso": "Es famoso por sus quesos helados artesanales — un postre tradicional arequipeño que no es queso ni helado, sino una mezcla congelada de leche, coco y canela batida a mano."
   },
   {
     "id": 23,
@@ -299,7 +346,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/valle_chilina",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Este valle fue habitado por culturas preincas hace más de 1,500 años. Las terrazas agrícolas (andenes) que se ven en sus laderas fueron construidas por los Churajón y luego mejoradas por los Incas.",
+    "dato_curioso": "En el valle nacen manantiales de agua pura que abastecieron a Arequipa durante siglos. Los arequipeños dicen que 'quien toma agua de Chilina, siempre regresa a Arequipa'."
   },
   {
     "id": 24,
@@ -312,7 +361,9 @@
     "horario": "06:00 - 18:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/selva_alegre",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Fue creado en el siglo XIX como un espacio de recreación para la élite arequipeña. Su nombre refleja la exuberante vegetación que contrasta con el paisaje árido que rodea la ciudad.",
+    "dato_curioso": "Dentro del parque viven pavos reales que caminan libremente. Fueron traídos como regalo diplomático y se han reproducido hasta formar una pequeña colonia."
   },
   {
     "id": 25,
@@ -325,7 +376,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/plaza_cayma",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Cayma es uno de los distritos más tradicionales de Arequipa. Su plaza es el corazón de un barrio conocido por preservar las costumbres gastronómicas arequipeñas más auténticas.",
+    "dato_curioso": "Cerca de esta plaza se encuentran las picanterías más antiguas de Arequipa, donde se cocina con leña en ollas de barro. La UNESCO declaró a las picanterías como Patrimonio Cultural de la Nación."
   },
   {
     "id": 26,
@@ -338,7 +391,9 @@
     "horario": "08:00 - 17:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/iglesia_cayma",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Construida en el siglo XVIII, es el santuario de la Virgen de la Candelaria, patrona de Cayma. Su fachada mestiza es una joya del arte colonial que mezcla iconografía católica con andina.",
+    "dato_curioso": "Cada 2 de febrero se celebra la Fiesta de la Candelaria con danzas, música y procesiones que duran varios días, atrayendo a miles de devotos de todo el sur del Perú."
   },
   {
     "id": 27,
@@ -351,7 +406,9 @@
     "horario": "08:00 - 17:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mirador_sachaca",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Sachaca es un distrito agrícola tradicional. El mirador fue construido para que los visitantes aprecien la campiña arequipeña y los volcanes desde una perspectiva panorámica de 360 grados.",
+    "dato_curioso": "Desde la cima del mirador se pueden contar hasta 7 volcanes en un día claro. Es el único punto en Arequipa donde se ve la cordillera completa en todas las direcciones."
   },
   {
     "id": 28,
@@ -364,7 +421,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/plaza_paucarpata",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Paucarpata significa 'andén florido' en quechua. Este distrito conserva terrazas agrícolas preincas que siguen siendo cultivadas hasta hoy, manteniendo técnicas de hace más de 1,000 años.",
+    "dato_curioso": "Los andenes de Paucarpata siguen produciendo alfalfa, maíz y papas usando el mismo sistema de irrigación que diseñaron las culturas preincas hace más de un milenio."
   },
   {
     "id": 29,
@@ -377,7 +436,9 @@
     "horario": "08:30 - 18:30",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mundo_alpaca",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Creado por la empresa textil Michell & Cía, una de las mayores exportadoras de fibra de alpaca del mundo. El recinto muestra el proceso completo de la industria textil alpaquera arequipeña.",
+    "dato_curioso": "La fibra de alpaca es más suave que el cashmere y más resistente que la lana de oveja. Arequipa es la capital mundial de la exportación de fibra de alpaca, procesando más del 80% de la producción global."
   },
   {
     "id": 30,
@@ -390,7 +451,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/rio_chili",
-    "imagen": ""
+    "imagen": "",
+    "historia": "El río Chili es la arteria vital de Arequipa. Su nombre proviene del quechua y significa 'frío'. Ha abastecido de agua a la ciudad desde antes de la llegada de los españoles.",
+    "dato_curioso": "El río Chili nace de los deshielos del volcán Chachani a más de 4,800 metros de altura. Sin este río, Arequipa simplemente no existiría — es un oasis en medio del desierto."
   },
   {
     "id": 31,
@@ -403,7 +466,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/portal_flores",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Recibe su nombre por las vendedoras de flores que históricamente ocupaban este portal. Ha sido reconstruido varias veces tras terremotos, pero siempre manteniendo su estilo colonial.",
+    "dato_curioso": "Las 'floreras' de este portal son una tradición que se mantiene desde hace más de 150 años. Las vendedoras pasan el oficio de madres a hijas, siendo un legado familiar."
   },
   {
     "id": 32,
@@ -416,7 +481,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/portal_san_agustin",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Nombrado por la cercanía a la Iglesia de San Agustín, este portal alberga algunos de los cafés y restaurantes más emblemáticos de Arequipa, siendo punto de reunión intelectual desde la colonia.",
+    "dato_curioso": "En los cafés de este portal se gestaron varias revoluciones políticas peruanas. Los arequipeños dicen que 'la política del Perú se cocina en este portal con un café de por medio'."
   },
   {
     "id": 33,
@@ -429,7 +496,9 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/portal_municipalidad",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Sede del gobierno local desde la época colonial. El edificio actual fue reconstruido tras el terremoto de 1868, manteniendo el estilo neoclásico con sillar blanco.",
+    "dato_curioso": "En el balcón de la Municipalidad se leen los bandos y proclamas oficiales. Fue desde aquí donde se proclamó a Arequipa como capital provisional del Perú durante la Guerra del Pacífico."
   },
   {
     "id": 34,
@@ -442,7 +511,9 @@
     "horario": "09:00 - 17:00",
     "precio": 45,
     "url_maps": "https://goo.gl/maps/santa_catalina",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Fundado en 1579 por doña María de Guzmán, una viuda laica. Con más de 20,000 m², funcionó como una ciudad dentro de la ciudad donde las monjas vivieron en total clausura durante más de 400 años.",
+    "dato_curioso": "A diferencia del blanco de la ciudad, sus muros internos están pintados de azul añil y rojo ocre. El permiso para construirlo fue dado por el Arzobispado de Cusco porque Arequipa aún no tenía el suyo."
   },
   {
     "id": 35,
@@ -455,7 +526,9 @@
     "horario": "09:00 - 18:00",
     "precio": 25,
     "url_maps": "https://goo.gl/maps/museo_santuarios",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Fue hallada en 1995 por el arqueólogo Johan Reinhard en la cima del volcán Ampato a 6,310 metros de altura. Juanita fue sacrificada como ofrenda inca (Capacocha) hace más de 500 años.",
+    "dato_curioso": "Juanita es una de las momias mejor conservadas del mundo porque fue congelada naturalmente por el hielo glacial. Conserva sus órganos, piel y cabello intactos después de más de 5 siglos."
   },
   {
     "id": 36,
@@ -468,7 +541,9 @@
     "horario": "10:00 - 17:00",
     "precio": 10,
     "url_maps": "https://goo.gl/maps/museo_catedral",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Este museo exhibe la colección de tesoros acumulados por la Catedral durante más de 400 años, incluyendo cálices de oro, vestiduras bordadas con hilos de plata y pinturas de la escuela cusqueña.",
+    "dato_curioso": "Entre sus tesoros hay una custodia de oro macizo con más de 1,000 diamantes y piedras preciosas que solo se exhibe durante la festividad del Corpus Christi."
   },
   {
     "id": 37,
@@ -481,7 +556,9 @@
     "horario": "09:00 - 17:00",
     "precio": 15,
     "url_maps": "https://goo.gl/maps/museo_recoleta",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Fundado en 1648 por frailes franciscanos recoletos. Posee una de las bibliotecas más importantes del sur del Perú con más de 20,000 libros, algunos del siglo XVI.",
+    "dato_curioso": "En su biblioteca hay un libro del año 1494, apenas dos años después del descubrimiento de América. También tiene una colección de objetos amazónicos traídos por los misioneros franciscanos."
   },
   {
     "id": 38,
@@ -494,7 +571,9 @@
     "horario": "09:00 - 17:00",
     "precio": 20,
     "url_maps": "https://goo.gl/maps/museo_santa_teresa",
-    "imagen": ""
+    "imagen": "",
+    "historia": "El monasterio carmelita fue fundado en 1710 y las monjas de clausura aún viven aquí. La colección incluye pinturas, esculturas y objetos religiosos de los siglos XVII al XIX.",
+    "dato_curioso": "Las monjas carmelitas que aún habitan el monasterio elaboran dulces artesanales que venden a través de un torno giratorio, sin que el comprador pueda verlas — manteniendo la tradición de clausura."
   },
   {
     "id": 39,
@@ -507,7 +586,9 @@
     "horario": "08:00 - 15:30",
     "precio": 5,
     "url_maps": "https://goo.gl/maps/museo_municipal",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Documenta la historia de Arequipa desde la época republicana hasta la actualidad. Contiene fotografías antiguas, documentos históricos y objetos que narran la vida política y social de la ciudad.",
+    "dato_curioso": "Entre sus exhibiciones hay fotografías de Arequipa de los años 1860, algunas de las más antiguas que existen de la ciudad, cuando aún no había automóviles ni electricidad."
   },
   {
     "id": 40,
@@ -520,7 +601,9 @@
     "horario": "09:00 - 15:00",
     "precio": 5,
     "url_maps": "https://goo.gl/maps/museo_unsa",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Pertenece a la Universidad Nacional de San Agustín, la más antigua de Arequipa (fundada en 1828). Exhibe piezas de las culturas preincas Churajón, Chiribaya y Tiahuanaco.",
+    "dato_curioso": "Contiene cerámicas de la cultura Churajón que muestran diseños de los volcanes de Arequipa, demostrando que hace más de 1,000 años los habitantes ya veneraban al Misti como deidad."
   },
   {
     "id": 41,
@@ -533,7 +616,9 @@
     "horario": "10:00 - 17:00",
     "precio": 10,
     "url_maps": "https://goo.gl/maps/museo_arte_contemporaneo",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Ubicado en una antigua casona industrial junto al río Chili, fue convertido en museo en 2003. Alberga obras de artistas peruanos y latinoamericanos desde los años 50 hasta la actualidad.",
+    "dato_curioso": "El edificio fue una estación del ferrocarril en el siglo XIX. Sus techos de metal original se conservaron como parte de la arquitectura industrial que hoy contrasta con el arte moderno."
   },
   {
     "id": 42,
@@ -546,7 +631,9 @@
     "horario": "08:30 - 15:30",
     "precio": 10,
     "url_maps": "https://goo.gl/maps/museo_vargas_llosa",
-    "imagen": ""
+    "imagen": "",
+    "historia": "En esta casa nació Mario Vargas Llosa el 28 de marzo de 1936. El Nobel de Literatura 2010 vivió aquí sus primeros años antes de mudarse a Bolivia y luego a Lima.",
+    "dato_curioso": "Vargas Llosa escribió en su autobiografía que Arequipa fue su primer gran amor. En el museo hay una recreación de la habitación donde nació, con objetos originales de la época."
   },
   {
     "id": 43,
@@ -559,7 +646,9 @@
     "horario": "09:00 - 17:00",
     "precio": 10,
     "url_maps": "https://goo.gl/maps/casa_moral",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Data del siglo XVIII y su nombre proviene de un centenario árbol de moras que crece en su patio principal. Su portada barroca tallada en sillar es una de las más bellas de la arquitectura civil arequipeña.",
+    "dato_curioso": "Alberga la mayor colección de billetes peruanos del país y una inusual colección de monedas romanas antiguas — uno de los pocos lugares en América con piezas numismáticas del Imperio Romano."
   },
   {
     "id": 44,
@@ -572,7 +661,9 @@
     "horario": "09:00 - 18:00",
     "precio": 5,
     "url_maps": "https://goo.gl/maps/tristan_pozo",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Construida en 1738, perteneció a la familia Tristán, una de las más influyentes de Arequipa colonial. Flora Tristán, célebre escritora y feminista franco-peruana, era descendiente de esta familia.",
+    "dato_curioso": "Flora Tristán, bisabuela del famoso pintor Paul Gauguin, pertenecía a esta familia. Así que esta casona tiene conexión directa con uno de los artistas más famosos del mundo."
   },
   {
     "id": 45,
@@ -585,7 +676,9 @@
     "horario": "09:00 - 17:00",
     "precio": 15,
     "url_maps": "https://goo.gl/maps/mansion_fundador",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Fue la hacienda personal de Garcí Manuel de Carbajal, el conquistador español que fundó Arequipa en 1540. La casona ha sido restaurada y conserva mobiliario y arte colonial original.",
+    "dato_curioso": "La mansión tiene su propia capilla con pinturas murales originales del siglo XVII. Los jardines tienen un manantial natural que los Incas ya usaban antes de la llegada española."
   },
   {
     "id": 46,
@@ -598,7 +691,9 @@
     "horario": "09:00 - 17:00",
     "precio": 10,
     "url_maps": "https://goo.gl/maps/molino_sabandia",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Construido en 1621, tiene más de 400 años y sigue funcionando. Usa la fuerza del agua de manantiales cercanos para mover las pesadas piedras de molino que trituran granos de trigo y maíz.",
+    "dato_curioso": "Fue declarado Patrimonio Cultural de la Nación en 1972. Es el molino de piedra volcánica más antiguo de Sudamérica que aún funciona — puedes ver cómo muele granos en tiempo real."
   },
   {
     "id": 47,
@@ -611,7 +706,9 @@
     "horario": "08:00 - 16:00",
     "precio": 15,
     "url_maps": "https://goo.gl/maps/ruta_sillar",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Las canteras de sillar están activas desde la época preinca. La piedra volcánica blanca (ignimbrita) proviene de las erupciones del volcán Chachani y es el material que le dio a Arequipa el nombre de 'Ciudad Blanca'.",
+    "dato_curioso": "Los cortadores de sillar (canteros) usan las mismas técnicas de hace 400 años, con herramientas manuales. Un bloque de sillar tarda 2 horas en cortarse y puede durar más de 500 años en pie."
   },
   {
     "id": 48,
@@ -624,7 +721,9 @@
     "horario": "08:00 - 14:00",
     "precio": 100,
     "url_maps": "https://goo.gl/maps/canotaje_chili",
-    "imagen": ""
+    "imagen": "",
+    "historia": "El rafting en el río Chili se popularizó en los años 90. El recorrido pasa por cañones volcánicos con rápidos de clase II a IV, rodeados de paisajes que solo se ven desde el agua.",
+    "dato_curioso": "Durante el recorrido de rafting puedes ver cóndores volando sobre los cañones. Es una de las pocas experiencias en el mundo donde haces deporte extremo mientras observas al ave voladora más grande del planeta."
   },
   {
     "id": 49,
@@ -637,7 +736,9 @@
     "horario": "08:30 - 18:30",
     "precio": 20,
     "url_maps": "https://goo.gl/maps/mundo_alpaca_tour",
-    "imagen": ""
+    "imagen": "",
+    "historia": "El tour muestra todo el proceso de la fibra de alpaca: desde el esquilado del animal hasta la prenda final. Arequipa es el centro mundial de procesamiento de fibra de alpaca desde el siglo XIX.",
+    "dato_curioso": "Existen 22 colores naturales de fibra de alpaca, más que cualquier otro animal productor de fibra en el mundo. La fibra de alpaca bebé (baby alpaca) es tan fina que tiene solo 22 micras de diámetro."
   },
   {
     "id": 50,
@@ -650,7 +751,9 @@
     "horario": "06:00 - 15:00",
     "precio": 15,
     "url_maps": "https://goo.gl/maps/banos_yura",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Las aguas termales de Yura son conocidas desde la época preinca. Los Incas ya las usaban con fines medicinales. Las aguas brotan a temperaturas de hasta 30°C con minerales volcánicos.",
+    "dato_curioso": "Las aguas contienen hierro, azufre y otros minerales que les dan propiedades curativas. Los arequipeños dicen que un baño en Yura 'cura los huesos y el alma' — tradición que tiene más de 500 años."
   },
   {
     "id": 51,
@@ -663,7 +766,9 @@
     "horario": "06:00 - 17:00",
     "precio": 70,
     "url_maps": "https://goo.gl/maps/canon_colca",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Con 4,160 metros de profundidad, es uno de los cañones más profundos del mundo (el doble que el Gran Cañón del Colorado). Fue formado por la erosión del río Colca a lo largo de millones de años.",
+    "dato_curioso": "Las terrazas agrícolas preincas del valle del Colca siguen siendo cultivadas hoy. Los pueblos Collagua y Cabana que las construyeron deformaban los cráneos de sus bebés para diferenciarse entre sí."
   },
   {
     "id": 52,
@@ -676,7 +781,9 @@
     "horario": "07:00 - 10:00",
     "precio": 70,
     "url_maps": "https://goo.gl/maps/cruz_condor",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Es el mirador más famoso del Cañón del Colca, ubicado a 3,287 metros sobre el nivel del mar. Aquí los cóndores andinos aprovechan las corrientes térmicas de la mañana para planear sobre el cañón.",
+    "dato_curioso": "El cóndor andino tiene una envergadura de hasta 3.3 metros y puede vivir hasta 75 años. No aletea casi nunca — usa las corrientes de aire caliente del cañón para volar sin esfuerzo durante horas."
   },
   {
     "id": 53,
@@ -689,7 +796,9 @@
     "horario": "06:00 - 17:00",
     "precio": 30,
     "url_maps": "https://goo.gl/maps/reserva_salinas",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Creada en 1979, protege 366,936 hectáreas de ecosistema altoandino entre 3,500 y 6,000 metros de altura. Es hogar de vicuñas, vizcachas, parihuanas y cóndores.",
+    "dato_curioso": "Las vicuñas que viven aquí producen la fibra más fina y cara del mundo — una bufanda de vicuña puede costar más de $3,000 dólares. En época inca, solo el emperador podía vestir ropa de vicuña."
   },
   {
     "id": 54,
@@ -702,7 +811,9 @@
     "horario": "06:00 - 17:00",
     "precio": 30,
     "url_maps": "https://goo.gl/maps/laguna_salinas",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Es un salar a 4,300 metros de altura ubicado entre los volcanes Misti, Pichu Pichu y Ubinas. En temporada de lluvias se convierte en laguna y atrae miles de flamencos andinos (parihuanas).",
+    "dato_curioso": "Las parihuanas (flamencos andinos) que habitan aquí inspiraron los colores de la bandera del Perú. Se cuenta que el libertador José de San Martín vio estas aves y eligió el rojo y blanco para la bandera."
   },
   {
     "id": 55,
@@ -715,7 +826,9 @@
     "horario": "08:00 - 16:00",
     "precio": 10,
     "url_maps": "https://goo.gl/maps/cuevas_sumbay",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Estas cuevas contienen más de 500 pinturas rupestres que datan de hace 6,000 a 8,000 años, ubicadas a 4,127 metros sobre el nivel del mar. Muestran escenas de caza y animales prehistóricos.",
+    "dato_curioso": "Entre las pinturas hay representaciones de camélidos, pumas y hasta escenas de caza colectiva. Algunas muestran animales que ya no existen en la zona, como el paleolama (una llama prehistórica gigante)."
   },
   {
     "id": 56,
@@ -728,7 +841,9 @@
     "horario": "06:00 - 17:00",
     "precio": 10,
     "url_maps": "https://goo.gl/maps/bosque_imata",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Estas formaciones de piedra volcánica fueron esculpidas por el viento y la erosión durante millones de años, a más de 4,500 metros de altura. Parecen árboles petrificados emergiendo del altiplano.",
+    "dato_curioso": "Las rocas alcanzan hasta 4 metros de altura y parecen un bosque congelado en el tiempo. Los pastores locales le dan nombres a cada formación: 'el fraile', 'el cóndor', 'la alpaca'."
   },
   {
     "id": 57,
@@ -741,7 +856,9 @@
     "horario": "24 horas",
     "precio": 250,
     "url_maps": "https://goo.gl/maps/volcan_misti",
-    "imagen": ""
+    "imagen": "",
+    "historia": "El Misti es un estratovolcán activo de 5,822 metros que los Incas consideraban sagrado (Apu). En su cráter se encontraron restos de sacrificios incas y ofrendas de oro y plata.",
+    "dato_curioso": "En 1998 se encontraron en la cima los restos de 6 momias incas sacrificadas como ofrenda. El Misti es un volcán activo que podría erupcionar — su última actividad significativa fue en el siglo XV."
   },
   {
     "id": 58,
@@ -754,7 +871,9 @@
     "horario": "24 horas",
     "precio": 300,
     "url_maps": "https://goo.gl/maps/volcan_chachani",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Con 6,057 metros, el Chachani es considerado uno de los 'seismiles' más accesibles del mundo para andinistas. Su nombre en quechua significa 'falda' o 'el que cubre', por las nubes que lo envuelven.",
+    "dato_curioso": "Es el volcán que abastece de agua a Arequipa a través de sus deshielos que alimentan el río Chili. Sin el Chachani, Arequipa no tendría agua — literalmente sostiene la vida de más de un millón de personas."
   },
   {
     "id": 59,
@@ -767,7 +886,9 @@
     "horario": "10:00 - 22:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mall_aventura",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Inaugurado como uno de los centros comerciales más grandes del sur del Perú, representa la modernización comercial de Arequipa en el siglo XXI.",
+    "dato_curioso": "Es uno de los malls con mejor vista a volcanes del mundo — desde su terraza puedes ver el Misti y el Chachani mientras tomas un café."
   },
   {
     "id": 60,
@@ -780,7 +901,9 @@
     "horario": "10:00 - 22:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mallplaza_arequipa",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Mallplaza es una cadena chilena que eligió Arequipa como su segunda sede en Perú, reconociendo la importancia económica de la ciudad en el sur del país.",
+    "dato_curioso": "Fue construido sobre terrenos que antes eran chacras (campos de cultivo). Los vecinos de Cayma aún recuerdan cuando esa zona era puro campo de alfalfa."
   },
   {
     "id": 61,
@@ -793,7 +916,9 @@
     "horario": "10:00 - 22:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/parque_lambramani",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Es uno de los primeros centros comerciales de formato abierto en Arequipa, diseñado para aprovechar el clima soleado de la ciudad que tiene más de 300 días de sol al año.",
+    "dato_curioso": "El nombre 'Lambramani' proviene del quechua y se relaciona con el barrio tradicional donde se ubica. Arequipa tiene más de 300 días de sol al año, ideal para un mall al aire libre."
   },
   {
     "id": 62,
@@ -806,6 +931,8 @@
     "horario": "10:00 - 22:00",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/arequipa_center",
-    "imagen": ""
+    "imagen": "",
+    "historia": "Ubicado en Cerro Colorado, el distrito de mayor crecimiento de Arequipa. Representa la expansión urbana moderna de una ciudad que ha duplicado su población en las últimas décadas.",
+    "dato_curioso": "Cerro Colorado recibe su nombre por el color rojizo de sus cerros, causado por la oxidación de minerales volcánicos. Antes era una zona despoblada y hoy es el distrito más poblado de Arequipa."
   }
 ]
