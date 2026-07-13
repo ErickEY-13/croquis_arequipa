@@ -595,8 +595,14 @@ function closeNearest() {
 // ═══════════════════════════════════════════════
 function initSidebar() {
   document.getElementById('btn-sidebar').addEventListener('click', () => {
-    document.getElementById('sidebar').classList.add('open');
-    document.getElementById('sidebar-overlay').classList.add('active');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    if (sidebar.classList.contains('open')) {
+      closeSidebar();
+    } else {
+      sidebar.classList.add('open');
+      overlay.classList.add('active');
+    }
   });
 
   document.getElementById('btn-close-sidebar').addEventListener('click', closeSidebar);
