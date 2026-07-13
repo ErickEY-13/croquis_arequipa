@@ -335,7 +335,7 @@ function showDetail(lugar) {
   // Set image
   const imgEl = document.getElementById('detail-image');
   if (imgEl) {
-    imgEl.src = categoryImages[lugar.categoria] || categoryImages['default'];
+    imgEl.src = lugar.imagen || categoryImages[lugar.categoria] || categoryImages['default'];
     imgEl.style.display = 'block';
   }
 
@@ -393,12 +393,36 @@ function initSearch() {
     const q = input.value.trim().toLowerCase();
 
     // ── Easter Egg ──
-    if (q === 'yamileth') {
-      document.getElementById('love-modal').classList.add('active');
+    if (q === 'yamileth' || q === 'erick') {
+      const modal = document.getElementById('love-modal');
+      const inner = document.getElementById('love-modal-inner');
+      
+      if (q === 'yamileth') {
+        inner.innerHTML = `
+          <i data-lucide="heart" class="love-heart-icon"></i>
+          <h2 class="love-title">Para Yamileth</h2>
+          <img src="1.jpg" alt="Yamileth 1" class="love-img" />
+          <p class="love-text">
+            Espero que la estés pasando muy bien, mi corazón. ❤️ Disfruta cada momento al máximo y crea recuerdos muy bonitos. Solo quiero verte feliz porque tu felicidad también me hace feliz.
+          </p>
+          <img src="2.jpg" alt="Yamileth 2" class="love-img" onerror="this.style.display='none'" />
+          <p class="love-text" style="margin-bottom: 0;">
+            Aprovecho para recordarte lo muchísimo que te amo. Te extraño, pero me pone muy contento saber que estás disfrutando de este viaje. Cuídate mucho mi amor. ❤️
+          </p>
+        `;
+      } else if (q === 'erick') {
+        inner.innerHTML = `
+          <i data-lucide="heart" class="love-heart-icon"></i>
+          <h2 class="love-title">Para Erick</h2>
+          <p class="love-text">Te amo bb Feliz viaje ❤️</p>
+        `;
+      }
+      
+      modal.classList.add('active');
       input.value = '';
       results.classList.remove('active');
       requestAnimationFrame(() => {
-        if (window.lucide) lucide.createIcons();
+        if (window.lucide) lucide.createIcons({ nodes: [modal] });
       });
       return;
     }
