@@ -498,15 +498,29 @@ function showNearestPlaces() {
   const panel = document.getElementById('nearest-panel');
   const list = document.getElementById('nearest-list');
 
-  list.innerHTML = top10.map((l, i) => {
+  const closest = top10[0];
+  const others = top10.slice(1);
+
+  const closestHtml = `
+    <div class="nearest-item nearest-highlight" data-id="${closest.id}">
+      <div class="nh-badge">¡Tu mejor opción!</div>
+      <img src="${categoryImages[closest.categoria] || categoryImages['default']}" class="nh-img" alt="Lugar sugerido" />
+      <div class="nh-info">
+        <h4 class="nh-name">${closest.nombre}</h4>
+        <p class="nh-dist">Está a solo <strong>${formatDistance(closest.distancia)}</strong> de ti</p>
+      </div>
+      <button class="btn-nh-go">Ver detalle <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></button>
+    </div>
+  `;
+
+  const othersHtml = others.map((l, i) => {
     let rankClass = 'rank-other';
-    if (i === 0) rankClass = 'rank-1';
-    else if (i === 1) rankClass = 'rank-2';
-    else if (i === 2) rankClass = 'rank-3';
+    if (i === 0) rankClass = 'rank-2';
+    else if (i === 1) rankClass = 'rank-3';
 
     return `
       <div class="nearest-item" data-id="${l.id}">
-        <div class="nearest-rank ${rankClass}">${i + 1}</div>
+        <div class="nearest-rank ${rankClass}">${i + 2}</div>
         <span class="nearest-dot" style="background:${catColor[l.categoria] || '#a3a3a3'}"></span>
         <div class="nearest-info">
           <div class="nearest-name">${l.nombre}</div>
@@ -515,6 +529,8 @@ function showNearestPlaces() {
       </div>
     `;
   }).join('');
+
+  list.innerHTML = closestHtml + '<div class="nearest-others-title">Otras opciones cercanas</div>' + othersHtml;
 
   panel.classList.add('active');
 
