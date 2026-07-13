@@ -206,7 +206,7 @@ function initCategories() {
   const container = document.getElementById('categories-container');
   if (!container) return;
   const cats = new Set(lugares.map(l => l.categoria));
-  const catArray = ['Todas', ...Array.from(cats)];
+  const catArray = ['Todas', 'Gratis', 'De pago', ...Array.from(cats)];
   
   container.innerHTML = catArray.map(c => `
     <button class="filter-pill ${c === 'Todas' ? 'active' : ''}" data-cat="${c}">
@@ -218,7 +218,15 @@ function initCategories() {
     pill.addEventListener('click', (e) => {
       container.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
       e.currentTarget.classList.add('active');
-      activeFilters.categoria = e.currentTarget.dataset.cat;
+      const val = e.currentTarget.dataset.cat;
+      
+      if (val === 'Gratis' || val === 'De pago') {
+        activeFilters.tipo = val === 'De pago' ? 'Paga' : 'Gratis';
+        activeFilters.categoria = 'Todas';
+      } else {
+        activeFilters.categoria = val;
+        activeFilters.tipo = 'Todos';
+      }
       
       // sync sidebar
       const sidebarPill = document.querySelector(`#filter-categoria .chip[data-filter="${e.currentTarget.dataset.cat}"]`);
@@ -451,36 +459,44 @@ function initSearch() {
 // ═══════════════════════════════════════════════
 // GEOLOCATION
 // ═══════════════════════════════════════════════
+function ensureLocation(callback) {
+  if (userLatLng) return callback();
+
+  if (!navigator.geolocation) {
+    alert('Tu navegador no soporta geolocalización.');
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    pos => {
+      userLatLng = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+
+      if (userMarker) map.removeLayer(userMarker);
+      const userIcon = L.divIcon({
+        className: '',
+        html: '<div class="user-marker"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9]
+      });
+      userMarker = L.marker([userLatLng.lat, userLatLng.lng], { icon: userIcon, zIndexOffset: 1000 })
+        .addTo(map)
+        .bindPopup('<div class="popup-inner"><h4>Tu ubicación</h4></div>');
+
+      map.setView([userLatLng.lat, userLatLng.lng], 15, { animate: true });
+      callback();
+    },
+    () => {
+      alert('No pudimos obtener tu ubicación. Revisa los permisos del navegador.');
+    },
+    { enableHighAccuracy: true, timeout: 10000 }
+  );
+}
+
 function initGeolocation() {
   document.getElementById('btn-locate').addEventListener('click', () => {
-    if (!navigator.geolocation) {
-      alert('Tu navegador no soporta geolocalización.');
-      return;
-    }
-
-    navigator.geolocation.getCurrentPosition(
-      pos => {
-        userLatLng = { lat: pos.coords.latitude, lng: pos.coords.longitude };
-
-        if (userMarker) map.removeLayer(userMarker);
-        const userIcon = L.divIcon({
-          className: '',
-          html: '<div class="user-marker"></div>',
-          iconSize: [18, 18],
-          iconAnchor: [9, 9]
-        });
-        userMarker = L.marker([userLatLng.lat, userLatLng.lng], { icon: userIcon, zIndexOffset: 1000 })
-          .addTo(map)
-          .bindPopup('<div class="popup-inner"><h4>Tu ubicación</h4></div>');
-
-        map.setView([userLatLng.lat, userLatLng.lng], 15, { animate: true });
-        showNearestPlaces();
-      },
-      () => {
-        alert('No pudimos obtener tu ubicación. Revisa los permisos del navegador.');
-      },
-      { enableHighAccuracy: true, timeout: 10000 }
-    );
+    ensureLocation(() => {
+      showNearestPlaces();
+    });
   });
 }
 
@@ -656,12 +672,9 @@ function getPlaceStatus(horario) {
 // ═══════════════════════════════════════════════
 // ROUTING (OSRM)
 // ═══════════════════════════════════════════════
-async function drawRouteOnMap() {
-  if (!userLatLng) {
-    alert("Por favor activa tu ubicación con el botón de la esquina superior derecha.");
-    return;
-  }
-  if (!selectedPlace) return;
+function drawRouteOnMap() {
+  ensureLocation(async () => {
+    if (!selectedPlace) return;
 
   if (currentRouteLine) {
     map.removeLayer(currentRouteLine);
@@ -695,12 +708,13 @@ async function drawRouteOnMap() {
       
       map.fitBounds(currentRouteLine.getBounds(), { padding: [50, 50] });
     }
-  } catch (err) {
-    console.error("Error drawing route", err);
-  } finally {
-    btn.innerHTML = originalHtml;
-    if (window.lucide) lucide.createIcons({ nodes: [btn] });
-  }
+    } catch (err) {
+      console.error("Error drawing route", err);
+    } finally {
+      btn.innerHTML = originalHtml;
+      if (window.lucide) lucide.createIcons({ nodes: [btn] });
+    }
+  });
 }
 
 // ═══════════════════════════════════════════════

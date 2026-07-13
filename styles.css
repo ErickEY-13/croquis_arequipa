@@ -1275,6 +1275,7 @@ body {
   padding: 10px 16px;
   border-bottom: 1px solid var(--border);
   position: relative;
+  margin-top: var(--header-h);
   z-index: 1000; /* above map */
   box-shadow: var(--shadow-sm);
 }
