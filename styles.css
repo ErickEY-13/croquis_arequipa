@@ -1279,7 +1279,7 @@ body {
   border-bottom: 1px solid var(--border);
   position: relative;
   margin-top: var(--header-h);
-  z-index: 1000; /* above map */
+  z-index: 500; /* below header so search results dropdown is visible */
   box-shadow: var(--shadow-sm);
 }
 
