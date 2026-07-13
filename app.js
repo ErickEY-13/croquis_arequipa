@@ -290,7 +290,7 @@ function initSearch() {
     const q = input.value.trim().toLowerCase();
 
     // ── Easter Egg ──
-    if (q === 'yamileth' || q === 'yami') {
+    if (q === 'yamileth') {
       document.getElementById('love-modal').classList.add('active');
       input.value = '';
       results.classList.remove('active');
