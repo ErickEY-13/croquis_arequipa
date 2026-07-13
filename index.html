@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arequipa Para Ti</title>
+  <meta name="description" content="Croquis interactivo de lugares turísticos de Arequipa, hecho con amor." />
+
+  <!-- Fonts: Inter (Apple-like) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SPLASH -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="splash-icon">
+        <i data-lucide="heart" class="splash-heart-icon"></i>
+      </div>
+      <h1 class="splash-title">Arequipa</h1>
+      <p class="splash-sub">Para Ti</p>
+      <button id="splash-btn" class="splash-btn" onclick="closeSplash()">
+        <span>Explorar</span>
+        <i data-lucide="arrow-right" class="btn-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="app-header" class="header">
+    <div class="header-left">
+      <div class="logo">
+        <i data-lucide="map-pin" class="logo-icon"></i>
+        <span class="logo-text">Arequipa</span>
+      </div>
+    </div>
+    <div class="header-center">
+      <div class="search-box">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="search-input" placeholder="Buscar lugar..." autocomplete="off" />
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+    <div class="header-right">
+      <button id="btn-locate" class="btn-action" title="Encontrar lugar más cercano">
+        <i data-lucide="navigation" class="action-icon"></i>
+        <span class="btn-label">Mi ubicación</span>
+      </button>
+      <button id="btn-sidebar" class="btn-action btn-icon-only" title="Filtros">
+        <i data-lucide="sliders-horizontal" class="action-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2>Filtros</h2>
+      <button id="btn-close-sidebar" class="btn-close">
+        <i data-lucide="x" class="close-icon"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>
+        <i data-lucide="tag" class="section-icon"></i>
+        Tipo de acceso
+      </h3>
+      <div class="filter-chips" id="filter-tipo">
+        <button class="chip active" data-filter="todos">Todos</button>
+        <button class="chip" data-filter="Gratis">Gratis</button>
+        <button class="chip" data-filter="Paga">De pago</button>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>
+        <i data-lucide="layers" class="section-icon"></i>
+        Categoría
+      </h3>
+      <div class="filter-chips" id="filter-categoria">
+        <button class="chip active" data-filter="todos">Todas</button>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>
+        <i data-lucide="bar-chart-3" class="section-icon"></i>
+        Estadísticas
+      </h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number" id="stat-total">0</span>
+          <span class="stat-label">Total</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="stat-gratis">0</span>
+          <span class="stat-label">Gratis</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="stat-paga">0</span>
+          <span class="stat-label">De pago</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="stat-visible">0</span>
+          <span class="stat-label">Visibles</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>
+        <i data-lucide="list" class="section-icon"></i>
+        Lugares <span id="list-count" class="list-count"></span>
+      </h3>
+      <div id="places-list" class="places-list"></div>
+    </div>
+  </aside>
+
+  <!-- OVERLAY -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <!-- DETAIL CARD -->
+  <div id="detail-card" class="detail-card">
+    <button id="btn-close-detail" class="btn-close-sm">
+      <i data-lucide="x" class="close-icon-sm"></i>
+    </button>
+    <div class="detail-badge" id="detail-badge"></div>
+    <h2 id="detail-name" class="detail-name"></h2>
+    <p id="detail-desc" class="detail-desc"></p>
+    <div class="detail-meta">
+      <div class="meta-item">
+        <i data-lucide="clock" class="meta-icon"></i>
+        <span id="detail-horario"></span>
+      </div>
+      <div class="meta-item">
+        <i data-lucide="wallet" class="meta-icon"></i>
+        <span id="detail-precio"></span>
+      </div>
+      <div class="meta-item">
+        <i data-lucide="map-pin" class="meta-icon"></i>
+        <span id="detail-distancia"></span>
+      </div>
+    </div>
+    <a id="detail-maps" class="btn-maps" href="#" target="_blank" rel="noopener">
+      <i data-lucide="external-link" class="maps-icon"></i>
+      <span>Abrir en Google Maps</span>
+    </a>
+  </div>
+
+  <!-- NEAREST PANEL -->
+  <div id="nearest-panel" class="nearest-panel">
+    <button id="btn-close-nearest" class="btn-close-sm">
+      <i data-lucide="x" class="close-icon-sm"></i>
+    </button>
+    <h3>
+      <i data-lucide="navigation" class="panel-icon"></i>
+      Lugares más cercanos
+    </h3>
+    <div id="nearest-list" class="nearest-list"></div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
