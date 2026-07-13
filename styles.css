@@ -871,6 +871,21 @@ body {
   color: var(--pink-400);
 }
 
+.status-open {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.status-closing {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.status-closed {
+  color: #ef4444;
+  font-weight: 700;
+}
+
 .detail-actions {
   display: flex;
   gap: 10px;

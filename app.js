@@ -251,7 +251,12 @@ function showDetail(lugar) {
 
   document.getElementById('detail-name').textContent = lugar.nombre;
   document.getElementById('detail-desc').textContent = lugar.descripcion;
-  document.getElementById('detail-horario').textContent = lugar.horario;
+  const status = getPlaceStatus(lugar.horario);
+  let horarioHtml = lugar.horario;
+  if (status.text) {
+    horarioHtml = `<span class="${status.class}">${status.text}</span> <span style="opacity:0.6; font-size: 0.72rem; margin-left: 4px;">(${lugar.horario})</span>`;
+  }
+  document.getElementById('detail-horario').innerHTML = horarioHtml;
   document.getElementById('detail-precio').textContent =
     lugar.precio === 0 ? 'Entrada gratuita' : `S/ ${lugar.precio}`;
 
@@ -511,6 +516,35 @@ function flyToPlace(lugar) {
       }
     }
   }
+}
+
+function getPlaceStatus(horario) {
+  if (horario.toLowerCase().includes('24 horas')) {
+    return { text: 'Abierto 24h', class: 'status-open' };
+  }
+
+  const parts = horario.split(' - ');
+  if (parts.length !== 2) return { text: '', class: '' };
+
+  const now = new Date();
+  const currentTotalMins = now.getHours() * 60 + now.getMinutes();
+
+  function timeToMins(t) {
+    const [h, m] = t.split(':').map(Number);
+    return h * 60 + m;
+  }
+
+  const startMins = timeToMins(parts[0]);
+  const endMins = timeToMins(parts[1]);
+
+  if (currentTotalMins >= startMins && currentTotalMins < endMins) {
+    if (endMins - currentTotalMins <= 60) {
+      return { text: 'Cierra pronto', class: 'status-closing' };
+    }
+    return { text: 'Abierto', class: 'status-open' };
+  }
+
+  return { text: 'Cerrado', class: 'status-closed' };
 }
 
 // ═══════════════════════════════════════════════
