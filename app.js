@@ -373,12 +373,17 @@ function closeDetail() {
 // ═══════════════════════════════════════════════
 // SEARCH
 // ═══════════════════════════════════════════════
+// Normalize text: lowercase + remove accents
+function normalize(str) {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
 function initSearch() {
   const input = document.getElementById('search-input');
   const results = document.getElementById('search-results');
 
   input.addEventListener('input', () => {
-    const q = input.value.trim().toLowerCase();
+    const q = normalize(input.value.trim());
 
     // ── Easter Egg ──
     if (q === 'yamileth' || q === 'erick') {
@@ -421,9 +426,9 @@ function initSearch() {
     }
 
     const matches = lugares.filter(l =>
-      l.nombre.toLowerCase().includes(q) ||
-      l.categoria.toLowerCase().includes(q) ||
-      l.descripcion.toLowerCase().includes(q)
+      normalize(l.nombre).includes(q) ||
+      normalize(l.categoria).includes(q) ||
+      normalize(l.descripcion).includes(q)
     ).slice(0, 8);
 
     if (matches.length === 0) {
