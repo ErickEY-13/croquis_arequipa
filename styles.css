@@ -1212,6 +1212,8 @@ body {
   border-radius: var(--radius-xl);
   max-width: 90%;
   width: 460px;
+  max-height: 85vh;
+  overflow-y: auto;
   text-align: center;
   box-shadow: 0 20px 60px rgba(236, 72, 153, 0.2);
   position: relative;
@@ -1342,6 +1344,7 @@ body {
 .weather-widget.hidden {
   opacity: 0;
   pointer-events: none;
+  display: none;
 }
 .weather-icon {
   width: 18px;
@@ -1433,6 +1436,8 @@ body {
     width: auto;
     padding: 18px;
     border-radius: var(--radius-md);
+    max-height: 60vh;
+    overflow-y: auto;
   }
 
   .detail-name { font-size: 1.1rem; }
@@ -1493,6 +1498,43 @@ body {
   .custom-marker .marker-inner svg {
     width: 12px;
     height: 12px;
+  }
+
+  .weather-widget {
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .love-modal-content {
+    padding: 24px;
+    padding-top: 48px;
+    max-height: 80vh;
+    width: 92%;
+    max-width: 92%;
+  }
+
+  .love-modal-content .btn-close-sm {
+    position: sticky;
+    top: 0;
+    right: 0;
+    margin-left: auto;
+    margin-bottom: 8px;
+    z-index: 10;
+    background: var(--pink-100);
+  }
+
+  .love-img {
+    max-width: 180px;
+    max-height: 160px;
+  }
+
+  .love-title {
+    font-size: 1.4rem;
+  }
+
+  .love-text {
+    font-size: 0.85rem;
   }
 }
 

@@ -17,31 +17,31 @@ let currentRouteLine = null;
 
 // ── Category → Lucide icon name mapping ──
 const catIcon = {
-  'Plaza':            'landmark',
-  'Iglesia':          'church',
-  'Museo':            'building-2',
-  'Mirador':          'mountain',
-  'Parque':           'trees',
+  'Plaza': 'landmark',
+  'Iglesia': 'church',
+  'Museo': 'building-2',
+  'Mirador': 'mountain',
+  'Parque': 'trees',
   'Barrio Histórico': 'home',
-  'Puente':           'arrow-left-right',
-  'Calle':            'route',
-  'Mercado':          'store',
-  'Monasterio':       'building',
+  'Puente': 'arrow-left-right',
+  'Calle': 'route',
+  'Mercado': 'store',
+  'Monasterio': 'building',
   'Centro Comercial': 'shopping-bag'
 };
 
 // Category → dot color (matching marker pins)
 const catColor = {
-  'Plaza':            '#ec4899',
-  'Iglesia':          '#8b5cf6',
-  'Museo':            '#f59e0b',
-  'Mirador':          '#3b82f6',
-  'Parque':           '#10b981',
+  'Plaza': '#ec4899',
+  'Iglesia': '#8b5cf6',
+  'Museo': '#f59e0b',
+  'Mirador': '#3b82f6',
+  'Parque': '#10b981',
   'Barrio Histórico': '#f97316',
-  'Puente':           '#0ea5e9',
-  'Calle':            '#eab308',
-  'Mercado':          '#ef4444',
-  'Monasterio':       '#a855f7',
+  'Puente': '#0ea5e9',
+  'Calle': '#eab308',
+  'Mercado': '#ef4444',
+  'Monasterio': '#a855f7',
   'Centro Comercial': '#f472b6'
 };
 
@@ -62,16 +62,16 @@ const categoryImages = {
 };
 
 const catClass = {
-  'Plaza':            'cat-plaza',
-  'Iglesia':          'cat-iglesia',
-  'Museo':            'cat-museo',
-  'Mirador':          'cat-mirador',
-  'Parque':           'cat-parque',
+  'Plaza': 'cat-plaza',
+  'Iglesia': 'cat-iglesia',
+  'Museo': 'cat-museo',
+  'Mirador': 'cat-mirador',
+  'Parque': 'cat-parque',
   'Barrio Histórico': 'cat-barrio',
-  'Puente':           'cat-puente',
-  'Calle':            'cat-calle',
-  'Mercado':          'cat-mercado',
-  'Monasterio':       'cat-monasterio',
+  'Puente': 'cat-puente',
+  'Calle': 'cat-calle',
+  'Mercado': 'cat-mercado',
+  'Monasterio': 'cat-monasterio',
   'Centro Comercial': 'cat-mall'
 };
 
@@ -119,19 +119,7 @@ async function loadData() {
   }
 }
 
-// ═══════════════════════════════════════════════
-// WEATHER
-// ═══════════════════════════════════════════════
-async function fetchWeather() {
-  try {
-    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-16.3989&longitude=-71.5369&current=temperature_2m,weather_code');
-    const data = await res.json();
-    const temp = Math.round(data.current.temperature_2m);
-    document.getElementById('weather-widget').textContent = `${temp}°C Arequipa`;
-  } catch (err) {
-    console.error('Error weather:', err);
-  }
-}
+
 
 // ═══════════════════════════════════════════════
 // MARKERS
@@ -207,7 +195,7 @@ function initCategories() {
   if (!container) return;
   const cats = new Set(lugares.map(l => l.categoria));
   const catArray = ['Todas', 'Gratis', 'De pago', ...Array.from(cats)];
-  
+
   container.innerHTML = catArray.map(c => `
     <button class="filter-pill ${c === 'Todas' ? 'active' : ''}" data-cat="${c}">
       ${c}
@@ -219,7 +207,7 @@ function initCategories() {
       container.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
       e.currentTarget.classList.add('active');
       const val = e.currentTarget.dataset.cat;
-      
+
       if (val === 'Gratis' || val === 'De pago') {
         activeFilters.tipo = val === 'De pago' ? 'Paga' : 'Gratis';
         activeFilters.categoria = 'Todas';
@@ -227,7 +215,7 @@ function initCategories() {
         activeFilters.categoria = val;
         activeFilters.tipo = 'Todos';
       }
-      
+
       // sync sidebar
       const sidebarPill = document.querySelector(`#filter-categoria .chip[data-filter="${e.currentTarget.dataset.cat}"]`);
       if (sidebarPill) {
@@ -257,7 +245,7 @@ function initCategories() {
       sidebarCatContainer.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
       activeFilters.categoria = chip.dataset.filter;
-      
+
       // sync top pills
       const topPill = document.querySelector(`.filter-pill[data-cat="${chip.dataset.filter === 'todos' ? 'Todas' : chip.dataset.filter}"]`);
       if (topPill) {
@@ -396,7 +384,7 @@ function initSearch() {
     if (q === 'yamileth' || q === 'erick') {
       const modal = document.getElementById('love-modal');
       const inner = document.getElementById('love-modal-inner');
-      
+
       if (q === 'yamileth') {
         inner.innerHTML = `
           <i data-lucide="heart" class="love-heart-icon"></i>
@@ -413,11 +401,11 @@ function initSearch() {
       } else if (q === 'erick') {
         inner.innerHTML = `
           <i data-lucide="heart" class="love-heart-icon"></i>
-          <h2 class="love-title">Para Erick</h2>
-          <p class="love-text">Te amo bb Feliz viaje ❤️</p>
+          <h2 class="love-title">De Erick</h2>
+          <p class="love-text">Te amo bb, que tengas un feliz viaje ❤️</p>
         `;
       }
-      
+
       modal.classList.add('active');
       input.value = '';
       results.classList.remove('active');
@@ -477,6 +465,13 @@ function initSearch() {
 
   document.getElementById('btn-close-love')?.addEventListener('click', () => {
     document.getElementById('love-modal').classList.remove('active');
+  });
+
+  // Close love modal by tapping overlay background
+  document.getElementById('love-modal')?.addEventListener('click', (e) => {
+    if (e.target === document.getElementById('love-modal')) {
+      document.getElementById('love-modal').classList.remove('active');
+    }
   });
 }
 
@@ -700,38 +695,38 @@ function drawRouteOnMap() {
   ensureLocation(async () => {
     if (!selectedPlace) return;
 
-  if (currentRouteLine) {
-    map.removeLayer(currentRouteLine);
-    currentRouteLine = null;
-  }
-
-  const btn = document.getElementById('btn-draw-route');
-  const originalHtml = btn.innerHTML;
-  btn.innerHTML = `<i data-lucide="loader" class="btn-dir-icon spin"></i><span>Calculando...</span>`;
-  if (window.lucide) lucide.createIcons({ nodes: [btn] });
-
-  try {
-    const start = `${userLatLng.lng},${userLatLng.lat}`;
-    const end = `${selectedPlace.longitud},${selectedPlace.latitud}`;
-    const url = `https://router.project-osrm.org/route/v1/driving/${start};${end}?geometries=geojson&overview=full`;
-    
-    const res = await fetch(url);
-    const data = await res.json();
-    
-    if (data.routes && data.routes.length > 0) {
-      const geojson = data.routes[0].geometry;
-      currentRouteLine = L.geoJSON(geojson, {
-        style: {
-          color: '#ec4899',
-          weight: 5,
-          opacity: 0.9,
-          dashArray: '10, 10',
-          className: 'route-line-anim'
-        }
-      }).addTo(map);
-      
-      map.fitBounds(currentRouteLine.getBounds(), { padding: [50, 50] });
+    if (currentRouteLine) {
+      map.removeLayer(currentRouteLine);
+      currentRouteLine = null;
     }
+
+    const btn = document.getElementById('btn-draw-route');
+    const originalHtml = btn.innerHTML;
+    btn.innerHTML = `<i data-lucide="loader" class="btn-dir-icon spin"></i><span>Calculando...</span>`;
+    if (window.lucide) lucide.createIcons({ nodes: [btn] });
+
+    try {
+      const start = `${userLatLng.lng},${userLatLng.lat}`;
+      const end = `${selectedPlace.longitud},${selectedPlace.latitud}`;
+      const url = `https://router.project-osrm.org/route/v1/driving/${start};${end}?geometries=geojson&overview=full`;
+
+      const res = await fetch(url);
+      const data = await res.json();
+
+      if (data.routes && data.routes.length > 0) {
+        const geojson = data.routes[0].geometry;
+        currentRouteLine = L.geoJSON(geojson, {
+          style: {
+            color: '#ec4899',
+            weight: 5,
+            opacity: 0.9,
+            dashArray: '10, 10',
+            className: 'route-line-anim'
+          }
+        }).addTo(map);
+
+        map.fitBounds(currentRouteLine.getBounds(), { padding: [50, 50] });
+      }
     } catch (err) {
       console.error("Error drawing route", err);
     } finally {
@@ -762,7 +757,7 @@ async function fetchWeather() {
       document.getElementById('weather-temp').textContent = `${temp}°C`;
       document.getElementById('weather-widget').classList.remove('hidden');
     }
-  } catch(e) {
+  } catch (e) {
     console.error('Clima error:', e);
   }
 }
