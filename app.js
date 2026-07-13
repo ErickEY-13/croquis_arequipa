@@ -288,6 +288,18 @@ function initSearch() {
 
   input.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
+
+    // ── Easter Egg ──
+    if (q === 'yamileth' || q === 'yami') {
+      document.getElementById('love-modal').classList.add('active');
+      input.value = '';
+      results.classList.remove('active');
+      requestAnimationFrame(() => {
+        if (window.lucide) lucide.createIcons();
+      });
+      return;
+    }
+
     if (q.length < 2) {
       results.classList.remove('active');
       return;
@@ -330,10 +342,14 @@ function initSearch() {
     });
   });
 
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.search-box')) {
+  document.addEventListener('click', (e) => {
+    if (!input.contains(e.target) && !results.contains(e.target)) {
       results.classList.remove('active');
     }
+  });
+
+  document.getElementById('btn-close-love')?.addEventListener('click', () => {
+    document.getElementById('love-modal').classList.remove('active');
   });
 }
 

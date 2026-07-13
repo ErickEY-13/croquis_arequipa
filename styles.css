@@ -1076,36 +1076,66 @@ body {
 }
 
 /* ═══════════════════════════════════════════════
-   SIGNATURE
+   EASTER EGG MODAL
    ═══════════════════════════════════════════════ */
-.signature {
+.love-modal {
   position: fixed;
-  bottom: 12px;
-  right: 16px;
-  z-index: 100;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-family: var(--font);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--pink-600);
-  opacity: 0.8;
+  justify-content: center;
+  opacity: 0;
   pointer-events: none;
-  font-style: italic;
-  letter-spacing: -0.01em;
-  background: rgba(255, 255, 255, 0.5);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  backdrop-filter: blur(4px);
+  transition: opacity 0.4s ease;
 }
 
-.signature-heart {
-  width: 12px;
-  height: 12px;
-  fill: var(--pink-500);
+.love-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.love-modal-content {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  max-width: 90%;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(236, 72, 153, 0.2);
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.4s var(--ease-bounce);
+  border: 2px solid var(--pink-100);
+}
+
+.love-modal.active .love-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+.love-heart-icon {
+  width: 48px;
+  height: 48px;
   color: var(--pink-500);
-  animation: pulse 2s ease infinite;
+  fill: var(--pink-500);
+  margin-bottom: 16px;
+  animation: pulse 2s infinite;
+}
+
+.love-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--pink-600);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.love-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* ═══════════════════════════════════════════════
