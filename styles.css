@@ -1147,21 +1147,16 @@ body {
   letter-spacing: -0.02em;
 }
 
-.love-gallery {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
-  justify-content: center;
-}
-
 .love-img {
-  flex: 1;
   width: 100%;
+  max-width: 320px;
   height: 180px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   border: 3px solid var(--pink-50);
+  margin: 0 auto 16px auto;
+  display: block;
 }
 
 .love-text {
