@@ -286,7 +286,7 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/mirador_yanahuara",
-    "imagen": "",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Arequipa-Yanahuara-Mirador.jpg/1024px-Arequipa-Yanahuara-Mirador.jpg",
     "historia": "Construido en el siglo XIX, sus arcos de sillar contienen inscripciones de personajes ilustres arequipeños. Es el mirador más emblemático de la ciudad y ofrece la vista clásica del Misti.",
     "dato_curioso": "Cada arco tiene grabada una frase de un personaje famoso de Arequipa. La más conocida dice: 'Eres sillar, eres valor y rebeldía', resumiendo el espíritu arequipeño."
   },
@@ -511,7 +511,7 @@
     "horario": "09:00 - 17:00",
     "precio": 45,
     "url_maps": "https://goo.gl/maps/santa_catalina",
-    "imagen": "",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Monasterio_santa_catalina.jpg/1024px-Monasterio_santa_catalina.jpg",
     "historia": "Fundado en 1579 por doña María de Guzmán, una viuda laica. Con más de 20,000 m², funcionó como una ciudad dentro de la ciudad donde las monjas vivieron en total clausura durante más de 400 años.",
     "dato_curioso": "A diferencia del blanco de la ciudad, sus muros internos están pintados de azul añil y rojo ocre. El permiso para construirlo fue dado por el Arzobispado de Cusco porque Arequipa aún no tenía el suyo."
   },
@@ -526,7 +526,7 @@
     "horario": "09:00 - 18:00",
     "precio": 25,
     "url_maps": "https://goo.gl/maps/museo_santuarios",
-    "imagen": "",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Momia_Juanita.jpg/800px-Momia_Juanita.jpg",
     "historia": "Fue hallada en 1995 por el arqueólogo Johan Reinhard en la cima del volcán Ampato a 6,310 metros de altura. Juanita fue sacrificada como ofrenda inca (Capacocha) hace más de 500 años.",
     "dato_curioso": "Juanita es una de las momias mejor conservadas del mundo porque fue congelada naturalmente por el hielo glacial. Conserva sus órganos, piel y cabello intactos después de más de 5 siglos."
   },
@@ -706,7 +706,7 @@
     "horario": "08:00 - 16:00",
     "precio": 15,
     "url_maps": "https://goo.gl/maps/ruta_sillar",
-    "imagen": "",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Canteras_de_sillar_A%C3%B1ashuayco_2.jpg/1024px-Canteras_de_sillar_A%C3%B1ashuayco_2.jpg",
     "historia": "Las canteras de sillar están activas desde la época preinca. La piedra volcánica blanca (ignimbrita) proviene de las erupciones del volcán Chachani y es el material que le dio a Arequipa el nombre de 'Ciudad Blanca'.",
     "dato_curioso": "Los cortadores de sillar (canteros) usan las mismas técnicas de hace 400 años, con herramientas manuales. Un bloque de sillar tarda 2 horas en cortarse y puede durar más de 500 años en pie."
   },
@@ -766,7 +766,7 @@
     "horario": "06:00 - 17:00",
     "precio": 70,
     "url_maps": "https://goo.gl/maps/canon_colca",
-    "imagen": "",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Canyon-du-Colca.jpg/1024px-Canyon-du-Colca.jpg",
     "historia": "Con 4,160 metros de profundidad, es uno de los cañones más profundos del mundo (el doble que el Gran Cañón del Colorado). Fue formado por la erosión del río Colca a lo largo de millones de años.",
     "dato_curioso": "Las terrazas agrícolas preincas del valle del Colca siguen siendo cultivadas hoy. Los pueblos Collagua y Cabana que las construyeron deformaban los cráneos de sus bebés para diferenciarse entre sí."
   },
@@ -856,7 +856,7 @@
     "horario": "24 horas",
     "precio": 250,
     "url_maps": "https://goo.gl/maps/volcan_misti",
-    "imagen": "",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/El_Misti_Arequipa.jpg/1024px-El_Misti_Arequipa.jpg",
     "historia": "El Misti es un estratovolcán activo de 5,822 metros que los Incas consideraban sagrado (Apu). En su cráter se encontraron restos de sacrificios incas y ofrendas de oro y plata.",
     "dato_curioso": "En 1998 se encontraron en la cima los restos de 6 momias incas sacrificadas como ofrenda. El Misti es un volcán activo que podría erupcionar — su última actividad significativa fue en el siglo XV."
   },
