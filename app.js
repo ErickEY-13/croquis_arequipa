@@ -8,8 +8,12 @@ let map;
 let markers = [];
 let userLatLng = null;
 let userMarker = null;
-let activeFilters = { tipo: 'todos', categoria: 'todos' };
+let activeFilters = {
+  tipo: 'Todos',
+  categoria: 'Todas'
+};
 let selectedPlace = null;
+let currentRouteLine = null;
 
 // ── Category → Lucide icon name mapping ──
 const catIcon = {
@@ -39,6 +43,22 @@ const catColor = {
   'Mercado':          '#ef4444',
   'Monasterio':       '#a855f7',
   'Centro Comercial': '#f472b6'
+};
+
+// Category → Unsplash Image URL
+const categoryImages = {
+  'Plaza': 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=600&h=300&fit=crop',
+  'Iglesia': 'https://images.unsplash.com/photo-1548625361-ec880b9afcd6?w=600&h=300&fit=crop',
+  'Centro Comercial': 'https://images.unsplash.com/photo-1519567281799-7323861c8b36?w=600&h=300&fit=crop',
+  'Mirador': 'https://images.unsplash.com/photo-1569429593458-18e388f615ee?w=600&h=300&fit=crop',
+  'Parque': 'https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=600&h=300&fit=crop',
+  'Museo': 'https://images.unsplash.com/photo-1518998053401-878c735c084e?w=600&h=300&fit=crop',
+  'Barrio Histórico': 'https://images.unsplash.com/photo-1588614532662-720448fdb4e6?w=600&h=300&fit=crop',
+  'Monasterio': 'https://images.unsplash.com/photo-1585544314038-a0d376981024?w=600&h=300&fit=crop',
+  'Mercado': 'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=600&h=300&fit=crop',
+  'Puente': 'https://images.unsplash.com/photo-1513682121497-80211f36a790?w=600&h=300&fit=crop',
+  'Calle': 'https://images.unsplash.com/photo-1514565131-fce0801e5785?w=600&h=300&fit=crop',
+  'default': 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=600&h=300&fit=crop'
 };
 
 const catClass = {
@@ -89,12 +109,27 @@ async function loadData() {
   try {
     const res = await fetch('lugares_arequipa.json');
     lugares = await res.json();
-    buildCategoryFilters();
+    initCategories();
     updateStats();
     renderMarkers();
     renderPlacesList();
+    fetchWeather();
   } catch (err) {
     console.error('Error cargando datos:', err);
+  }
+}
+
+// ═══════════════════════════════════════════════
+// WEATHER
+// ═══════════════════════════════════════════════
+async function fetchWeather() {
+  try {
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-16.3989&longitude=-71.5369&current=temperature_2m,weather_code');
+    const data = await res.json();
+    const temp = Math.round(data.current.temperature_2m);
+    document.getElementById('weather-widget').textContent = `${temp}°C Arequipa`;
+  } catch (err) {
+    console.error('Error weather:', err);
   }
 }
 
@@ -158,43 +193,87 @@ function renderMarkers() {
 // ═══════════════════════════════════════════════
 function getFilteredPlaces() {
   return lugares.filter(l => {
-    const tipoOk = activeFilters.tipo === 'todos' || l.tipo === activeFilters.tipo;
-    const catOk = activeFilters.categoria === 'todos' || l.categoria === activeFilters.categoria;
+    const tipoOk = activeFilters.tipo === 'Todos' || activeFilters.tipo === 'todos' || l.tipo === activeFilters.tipo;
+    const catOk = activeFilters.categoria === 'Todas' || activeFilters.categoria === 'todos' || l.categoria === activeFilters.categoria;
     return tipoOk && catOk;
   });
 }
 
-function buildCategoryFilters() {
-  const cats = [...new Set(lugares.map(l => l.categoria))].sort();
-  const container = document.getElementById('filter-categoria');
+// ═══════════════════════════════════════════════
+// CATEGORIES
+// ═══════════════════════════════════════════════
+function initCategories() {
+  const container = document.getElementById('categories-container');
+  if (!container) return;
+  const cats = new Set(lugares.map(l => l.categoria));
+  const catArray = ['Todas', ...Array.from(cats)];
+  
+  container.innerHTML = catArray.map(c => `
+    <button class="filter-pill ${c === 'Todas' ? 'active' : ''}" data-cat="${c}">
+      ${c}
+    </button>
+  `).join('');
 
-  cats.forEach(cat => {
-    const btn = document.createElement('button');
-    btn.className = 'chip';
-    btn.dataset.filter = cat;
-    btn.textContent = cat;
-    container.appendChild(btn);
+  container.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', (e) => {
+      container.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      e.currentTarget.classList.add('active');
+      activeFilters.categoria = e.currentTarget.dataset.cat;
+      
+      // sync sidebar
+      const sidebarPill = document.querySelector(`#filter-categoria .chip[data-filter="${e.currentTarget.dataset.cat}"]`);
+      if (sidebarPill) {
+        document.querySelectorAll('#filter-categoria .chip').forEach(c => c.classList.remove('active'));
+        sidebarPill.classList.add('active');
+      }
+
+      renderMarkers();
+      renderPlacesList();
+    });
   });
 
-  container.addEventListener('click', e => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    container.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeFilters.categoria = chip.dataset.filter;
-    renderMarkers();
-    renderPlacesList();
-  });
+  // Sidebar filters logic
+  const sidebarCatContainer = document.getElementById('filter-categoria');
+  if (sidebarCatContainer) {
+    cats.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'chip';
+      btn.dataset.filter = cat;
+      btn.textContent = cat;
+      sidebarCatContainer.appendChild(btn);
+    });
 
-  document.getElementById('filter-tipo').addEventListener('click', e => {
-    const chip = e.target.closest('.chip');
-    if (!chip) return;
-    e.currentTarget.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeFilters.tipo = chip.dataset.filter;
-    renderMarkers();
-    renderPlacesList();
-  });
+    sidebarCatContainer.addEventListener('click', e => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      sidebarCatContainer.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      activeFilters.categoria = chip.dataset.filter;
+      
+      // sync top pills
+      const topPill = document.querySelector(`.filter-pill[data-cat="${chip.dataset.filter === 'todos' ? 'Todas' : chip.dataset.filter}"]`);
+      if (topPill) {
+        document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+        topPill.classList.add('active');
+      }
+
+      renderMarkers();
+      renderPlacesList();
+    });
+  }
+
+  const sidebarTipoContainer = document.getElementById('filter-tipo');
+  if (sidebarTipoContainer) {
+    sidebarTipoContainer.addEventListener('click', e => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      sidebarTipoContainer.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      activeFilters.tipo = chip.dataset.filter;
+      renderMarkers();
+      renderPlacesList();
+    });
+  }
 }
 
 function updateStats() {
@@ -245,6 +324,13 @@ function showDetail(lugar) {
   selectedPlace = lugar;
   const card = document.getElementById('detail-card');
 
+  // Set image
+  const imgEl = document.getElementById('detail-image');
+  if (imgEl) {
+    imgEl.src = categoryImages[lugar.categoria] || categoryImages['default'];
+    imgEl.style.display = 'block';
+  }
+
   const badge = document.getElementById('detail-badge');
   badge.textContent = lugar.categoria;
   badge.className = `detail-badge ${lugar.tipo === 'Gratis' ? 'gratis' : 'paga'}`;
@@ -282,6 +368,10 @@ function showDetail(lugar) {
 function closeDetail() {
   document.getElementById('detail-card').classList.remove('active');
   selectedPlace = null;
+  if (currentRouteLine) {
+    map.removeLayer(currentRouteLine);
+    currentRouteLine = null;
+  }
 }
 
 // ═══════════════════════════════════════════════
@@ -548,11 +638,79 @@ function getPlaceStatus(horario) {
 }
 
 // ═══════════════════════════════════════════════
-// CLOSE BUTTONS
+// ROUTING (OSRM)
+// ═══════════════════════════════════════════════
+async function drawRouteOnMap() {
+  if (!userLatLng) {
+    alert("Por favor activa tu ubicación con el botón de la esquina superior derecha.");
+    return;
+  }
+  if (!selectedPlace) return;
+
+  if (currentRouteLine) {
+    map.removeLayer(currentRouteLine);
+    currentRouteLine = null;
+  }
+
+  const btn = document.getElementById('btn-draw-route');
+  const originalHtml = btn.innerHTML;
+  btn.innerHTML = `<i data-lucide="loader" class="btn-dir-icon spin"></i><span>Calculando...</span>`;
+  if (window.lucide) lucide.createIcons({ nodes: [btn] });
+
+  try {
+    const start = `${userLatLng.lng},${userLatLng.lat}`;
+    const end = `${selectedPlace.longitud},${selectedPlace.latitud}`;
+    const url = `https://router.project-osrm.org/route/v1/driving/${start};${end}?geometries=geojson&overview=full`;
+    
+    const res = await fetch(url);
+    const data = await res.json();
+    
+    if (data.routes && data.routes.length > 0) {
+      const geojson = data.routes[0].geometry;
+      currentRouteLine = L.geoJSON(geojson, {
+        style: {
+          color: '#ec4899',
+          weight: 5,
+          opacity: 0.9,
+          dashArray: '10, 10',
+          className: 'route-line-anim'
+        }
+      }).addTo(map);
+      
+      map.fitBounds(currentRouteLine.getBounds(), { padding: [50, 50] });
+    }
+  } catch (err) {
+    console.error("Error drawing route", err);
+  } finally {
+    btn.innerHTML = originalHtml;
+    if (window.lucide) lucide.createIcons({ nodes: [btn] });
+  }
+}
+
+// ═══════════════════════════════════════════════
+// CLOSE BUTTONS & ROUTE BUTTON
 // ═══════════════════════════════════════════════
 function initCloseButtons() {
   document.getElementById('btn-close-detail').addEventListener('click', closeDetail);
   document.getElementById('btn-close-nearest').addEventListener('click', closeNearest);
+  document.getElementById('btn-draw-route').addEventListener('click', drawRouteOnMap);
+}
+
+// ═══════════════════════════════════════════════
+// WEATHER
+// ═══════════════════════════════════════════════
+async function fetchWeather() {
+  try {
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-16.4090&longitude=-71.5375&current_weather=true');
+    const data = await res.json();
+    if (data.current_weather) {
+      const temp = Math.round(data.current_weather.temperature);
+      document.getElementById('weather-temp').textContent = `${temp}°C`;
+      document.getElementById('weather-widget').classList.remove('hidden');
+    }
+  } catch(e) {
+    console.error('Clima error:', e);
+  }
 }
 
 // ═══════════════════════════════════════════════
@@ -563,9 +721,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
 
   initMap();
-  loadData();
+  loadData().then(() => {
+    initCategories();
+  });
   initSearch();
   initGeolocation();
   initSidebar();
   initCloseButtons();
+  fetchWeather();
 });

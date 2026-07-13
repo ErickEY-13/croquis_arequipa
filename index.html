@@ -63,6 +63,11 @@
     </div>
   </header>
 
+  <!-- CATEGORIES FILTER -->
+  <div class="categories-bar">
+    <div id="categories-container" class="categories-container"></div>
+  </div>
+
   <!-- SIDEBAR -->
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-header">
@@ -134,8 +139,16 @@
   <!-- MAP -->
   <div id="map"></div>
 
+  <!-- WEATHER WIDGET -->
+  <div id="weather-widget" class="weather-widget hidden">
+    <i data-lucide="sun" id="weather-icon" class="weather-icon"></i>
+    <span id="weather-temp" class="weather-temp">--°C</span>
+    <span class="weather-city">Arequipa</span>
+  </div>
+
   <!-- DETAIL CARD -->
   <div id="detail-card" class="detail-card">
+    <img id="detail-image" class="detail-header-image" src="" alt="Lugar" style="display:none;" />
     <div class="detail-accent" id="detail-accent"></div>
     <button id="btn-close-detail" class="btn-close-sm">
       <i data-lucide="x" class="close-icon-sm"></i>
@@ -157,13 +170,16 @@
       </div>
     </div>
     <div class="detail-actions">
-      <a id="detail-directions" class="btn-directions" href="#" target="_blank" rel="noopener">
+      <a id="detail-directions" class="btn-directions" href="#" target="_blank" rel="noopener" title="Abrir en Google Maps">
         <i data-lucide="navigation" class="btn-dir-icon"></i>
         <span>Cómo llegar</span>
       </a>
-      <a id="detail-maps" class="btn-maps-secondary" href="#" target="_blank" rel="noopener">
-        <i data-lucide="map" class="btn-dir-icon"></i>
-        <span>Ver mapa</span>
+      <button id="btn-draw-route" class="btn-maps-secondary" title="Dibujar ruta aquí">
+        <i data-lucide="route" class="btn-dir-icon"></i>
+        <span>Ruta en mapa</span>
+      </button>
+      <a id="detail-maps" class="btn-maps-secondary" href="#" target="_blank" rel="noopener" title="Ver en Google Maps" style="width: 40px; padding: 0; justify-content: center;">
+        <i data-lucide="map" class="btn-dir-icon" style="margin:0;"></i>
       </a>
     </div>
   </div>
