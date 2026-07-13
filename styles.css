@@ -888,24 +888,30 @@ body {
 
 .detail-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
-.btn-directions {
-  flex: 2;
+.btn-directions, .btn-maps-secondary {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px;
+  gap: 6px;
+  padding: 12px 10px;
   border-radius: var(--radius-full);
-  background: var(--text-primary);
-  color: var(--white);
   font-family: var(--font);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-decoration: none;
   transition: var(--transition);
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-directions {
+  background: var(--text-primary);
+  color: var(--white);
 }
 
 .btn-directions:hover {
@@ -915,23 +921,32 @@ body {
 }
 
 .btn-maps-secondary {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px;
-  border-radius: var(--radius-full);
   background: var(--accent-lighter);
   color: var(--accent-dark);
-  font-family: var(--font);
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: var(--transition);
 }
 
 .btn-maps-secondary:hover {
+  background: var(--pink-200);
+  transform: translateY(-2px);
+}
+
+.btn-maps-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--accent-lighter);
+  color: var(--accent-dark);
+  text-decoration: none;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-maps-icon:hover {
   background: var(--pink-200);
   transform: translateY(-2px);
 }
@@ -1308,8 +1323,8 @@ body {
 /* Weather Widget */
 .weather-widget {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
+  top: 80px;
+  right: 24px;
   z-index: 999;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);

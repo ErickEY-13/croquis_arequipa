@@ -148,7 +148,7 @@
 
   <!-- DETAIL CARD -->
   <div id="detail-card" class="detail-card">
-    <img id="detail-image" class="detail-header-image" src="" alt="Lugar" style="display:none;" />
+    <img id="detail-image" class="detail-header-image" src="" alt="Lugar" style="display:none;" onerror="this.style.display='none'" />
     <div class="detail-accent" id="detail-accent"></div>
     <button id="btn-close-detail" class="btn-close-sm">
       <i data-lucide="x" class="close-icon-sm"></i>
@@ -178,7 +178,7 @@
         <i data-lucide="route" class="btn-dir-icon"></i>
         <span>Ruta en mapa</span>
       </button>
-      <a id="detail-maps" class="btn-maps-secondary" href="#" target="_blank" rel="noopener" title="Ver en Google Maps" style="width: 40px; padding: 0; justify-content: center;">
+      <a id="detail-maps" class="btn-maps-icon" href="#" target="_blank" rel="noopener" title="Ver en Google Maps">
         <i data-lucide="map" class="btn-dir-icon" style="margin:0;"></i>
       </a>
     </div>
