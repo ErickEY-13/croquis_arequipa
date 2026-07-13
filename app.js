@@ -320,11 +320,34 @@ function showDetail(lugar) {
   selectedPlace = lugar;
   const card = document.getElementById('detail-card');
 
-  // Set image
-  const imgEl = document.getElementById('detail-image');
-  if (imgEl) {
-    imgEl.src = lugar.imagen || categoryImages[lugar.categoria] || categoryImages['default'];
-    imgEl.style.display = 'block';
+  // Build image carousel
+  const carousel = document.getElementById('detail-carousel');
+  let images = [];
+
+  if (lugar.imagenes && Array.isArray(lugar.imagenes) && lugar.imagenes.length > 0) {
+    images = lugar.imagenes;
+  } else if (lugar.imagen) {
+    images = [lugar.imagen];
+  } else {
+    images = [categoryImages[lugar.categoria] || categoryImages['default']];
+  }
+
+  if (images.length === 1) {
+    carousel.innerHTML = `<img src="${images[0]}" alt="${lugar.nombre}" class="detail-header-image" onerror="this.style.display='none'" />`;
+  } else {
+    const slidesHtml = images.map((src, i) =>
+      `<img src="${src}" alt="${lugar.nombre} ${i + 1}" class="carousel-slide ${i === 0 ? 'active' : ''}" onerror="this.style.display='none'" />`
+    ).join('');
+    const dotsHtml = images.map((_, i) =>
+      `<span class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`
+    ).join('');
+    carousel.innerHTML = `
+      <div class="carousel-track">${slidesHtml}</div>
+      <button class="carousel-btn carousel-prev"><i data-lucide="chevron-left" style="width:16px;height:16px;"></i></button>
+      <button class="carousel-btn carousel-next"><i data-lucide="chevron-right" style="width:16px;height:16px;"></i></button>
+      <div class="carousel-dots">${dotsHtml}</div>
+    `;
+    initCarousel(carousel, images.length);
   }
 
   const badge = document.getElementById('detail-badge');
@@ -358,6 +381,40 @@ function showDetail(lugar) {
   // Re-init icons in card
   requestAnimationFrame(() => {
     if (window.lucide) lucide.createIcons({ nodes: [card] });
+  });
+}
+
+// ── Carousel logic ──
+function initCarousel(container, total) {
+  let current = 0;
+  const slides = container.querySelectorAll('.carousel-slide');
+  const dots = container.querySelectorAll('.carousel-dot');
+  const prevBtn = container.querySelector('.carousel-prev');
+  const nextBtn = container.querySelector('.carousel-next');
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + total) % total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  prevBtn.addEventListener('click', (e) => { e.stopPropagation(); goTo(current - 1); });
+  nextBtn.addEventListener('click', (e) => { e.stopPropagation(); goTo(current + 1); });
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => { e.stopPropagation(); goTo(parseInt(dot.dataset.index)); });
+  });
+
+  // Touch swipe
+  let startX = 0;
+  const track = container.querySelector('.carousel-track');
+  track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      goTo(diff > 0 ? current + 1 : current - 1);
+    }
   });
 }
 

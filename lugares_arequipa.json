@@ -23,7 +23,10 @@
     "horario": "24 horas",
     "precio": 0,
     "url_maps": "https://goo.gl/maps/centro_historico",
-    "imagen": ""
+    "imagenes": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/5f/Catedral_Arequipa%2C_Peru.jpg",
+      "https://consultasenlinea.mincetur.gob.pe/fichaInventario/foto.aspx?cod=400168"
+    ]
   },
   {
     "id": 3,

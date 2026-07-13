@@ -1366,15 +1366,96 @@ body {
   padding-left: 8px;
 }
 
-/* Detail Card Image */
+/* Detail Card Image & Carousel */
+.detail-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  margin-bottom: -16px;
+  z-index: 0;
+  background: var(--gray-100);
+}
+
 .detail-header-image {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  margin-bottom: -16px; /* pull content up over it */
+  display: block;
+}
+
+.carousel-track {
   position: relative;
-  z-index: 0;
+  width: 100%;
+  height: 160px;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  backdrop-filter: blur(4px);
+}
+
+.carousel-btn:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.carousel-prev { left: 6px; }
+.carousel-next { right: 6px; }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.carousel-dot.active {
+  background: var(--white);
+  transform: scale(1.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* ═══════════════════════════════════════════════
