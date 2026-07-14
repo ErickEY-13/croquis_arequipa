@@ -468,11 +468,11 @@ function initSearch() {
         inner.innerHTML = `
           <i data-lucide="heart" class="love-heart-icon"></i>
           <h2 class="love-title">Para Yamileth</h2>
-          <img src="1.jpg" alt="Yamileth 1" class="love-img" />
+          <img src="images/1.jpg" alt="Yamileth 1" class="love-img" />
           <p class="love-text">
             Espero que la estés pasando muy bien, mi corazón. ❤️ Disfruta cada momento al máximo y crea recuerdos muy bonitos. Solo quiero verte feliz porque tu felicidad también me hace feliz.
           </p>
-          <img src="2.jpg" alt="Yamileth 2" class="love-img" onerror="this.style.display='none'" />
+          <img src="images/2.jpg" alt="Yamileth 2" class="love-img" onerror="this.style.display='none'" />
           <p class="love-text" style="margin-bottom: 0;">
             Aprovecho para recordarte lo muchísimo que te amo. Te extraño, pero me pone muy contento saber que estás disfrutando de este viaje. Cuídate mucho mi amor. ❤️
           </p>
