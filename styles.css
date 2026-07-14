@@ -1415,7 +1415,7 @@ body {
   position: absolute;
   top: 80px;
   right: 24px;
-  z-index: 999;
+  z-index: 750;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   padding: 8px 14px;
