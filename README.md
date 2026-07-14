@@ -21,7 +21,6 @@
 *   **JavaScript (ES6+)** para la lógica de la aplicación y la interactividad.
 *   **Leaflet.js** para la renderización del mapa y marcadores personalizados.
 *   **Lucide Icons** para una iconografía limpia y consistente.
-*   **Node.js** (Opcional, incluye un script `fetch_images.js` para obtener imágenes automáticamente desde Wikipedia).
 
 ## 📂 Estructura del Proyecto
 
@@ -30,7 +29,6 @@
 ├── styles.css                # Hoja de estilos con variables y diseño responsivo
 ├── app.js                    # Lógica de la aplicación, mapas y eventos
 ├── lugares_arequipa.json     # Base de datos local con los lugares turísticos
-├── fetch_images.js           # Script de Node.js para auto-completar imágenes de Wikipedia
 └── images/                   # Carpeta de recursos e imágenes locales
     ├── 1.jpg
     └── 2.jpg
